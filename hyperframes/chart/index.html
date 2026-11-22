@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- (b) 1920x1080 animated bar chart with a target line drawn on, labels and counters. See ../../SPEC.md. -->
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/fonts/Geist-VF.ttf") format("truetype");
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: "Geist Mono";
+        src: url("assets/fonts/GeistMono-VF.ttf") format("truetype");
+        font-weight: 100 900;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #0b1020; font-family: "Geist"; }
+      .abs { position: absolute; }
+      .text { position: absolute; white-space: pre; line-height: normal; }
+      #title { left: 120px; top: 80px; font-weight: 700; font-size: 60px; color: #fff; }
+      #subtitle { left: 120px; top: 158px; font-weight: 400; font-size: 30px; color: #94a3b8; }
+      .grid { position: absolute; left: 160px; height: 2px; width: 0; background: #1e293b; }
+      .gridlabel { position: absolute; right: 1780px; transform: translateY(-50%); font: 400 22px "Geist Mono"; color: #64748b; line-height: normal; }
+      #baseline { left: 160px; top: 898.5px; width: 0; height: 3px; background: #475569; }
+      .bar { position: absolute; bottom: 180px; width: 84px; height: 0; border-radius: 6px; background: #38bdf8; }
+      .bar.last { background: #f472b6; }
+      .value { position: absolute; bottom: 192px; transform: translateX(-50%); font: 600 26px "Geist Mono"; color: #fff; line-height: normal; }
+      .month { position: absolute; top: 920px; transform: translateX(-50%); font-weight: 500; font-size: 26px; color: #94a3b8; line-height: normal; }
+      svg { position: absolute; left: 0; top: 0; }
+      .legend-text { position: absolute; top: 110px; transform: translateY(-50%); font-weight: 500; font-size: 26px; color: #cbd5e1; line-height: normal; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1920" data-height="1080">
+      <div id="title" class="text">Monthly active users, 2026</div>
+      <div id="subtitle" class="text">Millions, January to December</div>
+      <div id="plot"></div>
+      <div id="baseline" class="abs"></div>
+      <svg width="1920" height="1080"><path id="target" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><g id="dots"></g></svg>
+      <div id="legend">
+        <div class="abs" style="left: 1460px; top: 99px; width: 22px; height: 22px; border-radius: 3px; background: #38bdf8"></div>
+        <div class="legend-text" style="left: 1494px">Actual</div>
+        <div class="abs" style="left: 1620px; top: 107.5px; width: 36px; height: 5px; border-radius: 2.5px; background: #fbbf24"></div>
+        <div class="legend-text" style="left: 1668px">Target</div>
+      </div>
+    </div>
+    <script>
+      const VALUES = [12, 18, 23, 31, 36, 44, 52, 57, 63, 71, 80, 92];
+      const TARGETS = [15, 20, 26, 30, 38, 42, 50, 58, 66, 72, 78, 88];
+      const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const X0 = 160, X1 = 1800, BASE = 900, PXU = 6, SLOT = (X1 - X0) / VALUES.length;
+      const cx = (i) => X0 + SLOT * (i + 0.5);
+      const E = "power2.out";
+      const tl = gsap.timeline({ paused: true });
+      const plot = document.getElementById("plot");
+
+      tl.fromTo("#title", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0);
+      tl.fromTo("#subtitle", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 0.15);
+
+      for (const v of [25, 50, 75, 100]) {
+        const y = BASE - v * PXU;
+        const line = document.createElement("div");
+        line.className = "grid";
+        line.style.top = y - 1 + "px";
+        const label = document.createElement("div");
+        label.className = "gridlabel";
+        label.style.top = y + "px";
+        label.textContent = v;
+        plot.append(line, label);
+        tl.fromTo(line, { width: 0 }, { width: X1 - X0, duration: 0.7, ease: E }, 0.3);
+        tl.fromTo(label, { opacity: 0 }, { opacity: 1, duration: 0.7, ease: E }, 0.3);
+      }
+      tl.fromTo("#baseline", { width: 0 }, { width: X1 - X0, duration: 0.7, ease: E }, 0.3);
+
+      VALUES.forEach((v, i) => {
+        const t0 = 0.8 + 0.12 * i;
+        const h = v * PXU;
+        const bar = document.createElement("div");
+        bar.className = i === VALUES.length - 1 ? "bar last" : "bar";
+        bar.style.left = cx(i) - 42 + "px";
+        const value = document.createElement("div");
+        value.className = "value";
+        value.style.left = cx(i) + "px";
+        value.textContent = "0";
+        const month = document.createElement("div");
+        month.className = "month";
+        month.style.left = cx(i) + "px";
+        month.textContent = MONTHS[i];
+        plot.append(bar, value, month);
+        tl.fromTo(bar, { height: 0 }, { height: h, duration: 0.8, ease: E }, t0);
+        tl.fromTo(value, { y: 0 }, { y: -h, duration: 0.8, ease: E }, t0);
+        tl.fromTo(value, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, t0);
+        const counter = { n: 0 };
+        tl.fromTo(counter, { n: 0 }, {
+          n: v, duration: 0.8, ease: E,
+          onUpdate: () => { value.textContent = Math.round(counter.n); },
+        }, t0);
+        tl.fromTo(month, { opacity: 0 }, { opacity: 1, duration: 0.7, ease: E }, 0.3);
+      });
+
+      const pts = TARGETS.map((v, i) => [Math.round(cx(i) * 100) / 100, BASE - v * PXU]);
+      const path = document.getElementById("target");
+      path.setAttribute("d", "M " + pts.map(([x, y]) => `${x} ${y}`).join(" L "));
+      const len = path.getTotalLength();
+      path.style.strokeDasharray = len;
+      tl.fromTo(path, { strokeDashoffset: len }, { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" }, 3.0);
+      // a zero-length dash still draws its round cap: keep the line hidden until it starts drawing
+      tl.fromTo(path, { opacity: 0 }, { opacity: 1, duration: 0.001, ease: "none" }, 3.0 + 1 / 60);
+      const dots = document.getElementById("dots");
+      for (const [x, y] of pts) {
+        const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        c.setAttribute("cx", x);
+        c.setAttribute("cy", y);
+        c.setAttribute("r", 0);
+        c.setAttribute("fill", "#fbbf24");
+        dots.append(c);
+        tl.fromTo(c, { attr: { r: 0 } }, { attr: { r: 8 }, duration: 0.4, ease: E }, 5.0);
+      }
+      tl.fromTo("#legend", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: E }, 3.0);
+      tl.set({}, {}, 10);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

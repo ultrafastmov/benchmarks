@@ -1,0 +1,17 @@
+{
+  "name": "benchmark-remotion",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The benchmark compositions written in Remotion",
+  "scripts": {},
+  "dependencies": {
+    "@remotion/cli": "4.0.545",
+    "@remotion/fonts": "4.0.545",
+    "@remotion/media": "4.0.545",
+    "@remotion/motion-blur": "4.0.545",
+    "@remotion/paths": "4.0.545",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.545"
+  }
+}

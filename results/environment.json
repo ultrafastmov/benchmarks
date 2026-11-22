@@ -1,0 +1,33 @@
+{
+ "cpu": {
+  "model": "AMD Ryzen 9 9950X3D2 16-Core Processor",
+  "cores": 16,
+  "threads": 32,
+  "max_mhz": 5756.4521
+ },
+ "ram_gib": 60.4,
+ "gpu": "NVIDIA GeForce RTX 5090, 620.70.06, 32607 MiB, 5, 575.00 W",
+ "os": "Fedora Linux 45",
+ "kernel": "7.3.3-300.fc45.x86_64",
+ "node": "v22.23.1",
+ "npm": "10.9.8",
+ "ffmpeg_system": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+ "ffmpeg_hyperframes": "ffmpeg version n9.0.2-61-gd59078794d-20261121 Copyright (c) 2000-2026 the FFmpeg developers",
+ "ultrafast": {
+  "version": "ultrafast 0.1.1",
+  "binary_sha256": "409b020e9a6e85e46a252248291111bec3fec2a0dab5a87bee94164d9b0c2b23",
+  "device": "backend: vulkan\ndevice:  NVIDIA GeForce RTX 5090"
+ },
+ "remotion": {
+  "remotion": "4.0.545",
+  "@remotion/cli": "4.0.545",
+  "@remotion/media": "4.0.545",
+  "react": "19.3.1",
+  "chrome_headless_shell": "Chromium 158.0.8127.2"
+ },
+ "hyperframes": {
+  "hyperframes": "0.9.79",
+  "gsap": "3.15.0",
+  "chrome_headless_shell": "Google Chrome for Testing 158.0.8127.36"
+ }
+}

@@ -1,0 +1,391 @@
+{
+ "version": 1,
+ "format": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 10.0,
+  "motion_blur": {
+   "samples": 8,
+   "shutter": 0.5,
+   "max_samples": 32
+  }
+ },
+ "output": "grain",
+ "nodes": {
+  "bg": {
+   "op": "solid",
+   "params": {
+    "color": "#07060d"
+   }
+  },
+  "blob0": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#7c3aed",
+    "size": [
+     560,
+     560
+    ],
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        600,
+        420
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 5,
+       "v": [
+        1000,
+        640
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 10,
+       "v": [
+        600,
+        420
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "blob0_blur": {
+   "op": "blur",
+   "params": {
+    "radius": 80
+   },
+   "inputs": {
+    "source": "blob0"
+   }
+  },
+  "blob1": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#06b6d4",
+    "size": [
+     560,
+     560
+    ],
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1340,
+        380
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 5,
+       "v": [
+        980,
+        560
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 10,
+       "v": [
+        1340,
+        380
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "blob1_blur": {
+   "op": "blur",
+   "params": {
+    "radius": 80
+   },
+   "inputs": {
+    "source": "blob1"
+   }
+  },
+  "blob2": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#f43f5e",
+    "size": [
+     560,
+     560
+    ],
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        900,
+        800
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 5,
+       "v": [
+        720,
+        520
+       ],
+       "ease": "in_out_sine"
+      },
+      {
+       "t": 10,
+       "v": [
+        900,
+        800
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "blob2_blur": {
+   "op": "blur",
+   "params": {
+    "radius": 80
+   },
+   "inputs": {
+    "source": "blob2"
+   }
+  },
+  "title_text": {
+   "op": "text",
+   "params": {
+    "text": "GLOW",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 900,
+    "size": 260,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "middle",
+    "position": [
+     960,
+     540
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.5,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.5,
+       "v": 1
+      }
+     ]
+    },
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.9
+      },
+      {
+       "t": 0.5,
+       "v": 0.9,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.5,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "title_glow": {
+   "op": "glow",
+   "params": {
+    "intensity": 1.0,
+    "radius": 24
+   },
+   "inputs": {
+    "source": "title_text"
+   }
+  },
+  "subtitle": {
+   "op": "text",
+   "params": {
+    "text": "GPU EFFECTS TEST",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 500,
+    "size": 32,
+    "tracking": 8,
+    "color": "#c4b5fd",
+    "align": "center",
+    "position": [
+     960,
+     720
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.2,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.8,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "whip0": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#ffffff",
+    "size": [
+     360,
+     28
+    ],
+    "radius": 14,
+    "center": {
+     "keys": [
+      {
+       "t": 1.0,
+       "v": [
+        -300,
+        860
+       ],
+       "ease": "in_out_cubic"
+      },
+      {
+       "t": 1.6,
+       "v": [
+        2220,
+        860
+       ]
+      }
+     ]
+    }
+   },
+   "timing": {
+    "in": 1.0,
+    "out": 1.6
+   }
+  },
+  "whip1": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#ffffff",
+    "size": [
+     360,
+     28
+    ],
+    "radius": 14,
+    "center": {
+     "keys": [
+      {
+       "t": 6.0,
+       "v": [
+        2220,
+        860
+       ],
+       "ease": "in_out_cubic"
+      },
+      {
+       "t": 6.6,
+       "v": [
+        -300,
+        860
+       ]
+      }
+     ]
+    }
+   },
+   "timing": {
+    "in": 6.0,
+    "out": 6.6
+   }
+  },
+  "frame_0": {
+   "op": "over",
+   "inputs": {
+    "fg": "blob0_blur",
+    "bg": "bg"
+   }
+  },
+  "frame_1": {
+   "op": "over",
+   "inputs": {
+    "fg": "blob1_blur",
+    "bg": "frame_0"
+   }
+  },
+  "frame_2": {
+   "op": "over",
+   "inputs": {
+    "fg": "blob2_blur",
+    "bg": "frame_1"
+   }
+  },
+  "frame_3": {
+   "op": "over",
+   "inputs": {
+    "fg": "title_glow",
+    "bg": "frame_2"
+   }
+  },
+  "frame_4": {
+   "op": "over",
+   "inputs": {
+    "fg": "subtitle",
+    "bg": "frame_3"
+   }
+  },
+  "frame_5": {
+   "op": "over",
+   "inputs": {
+    "fg": "whip0",
+    "bg": "frame_4"
+   }
+  },
+  "frame_6": {
+   "op": "over",
+   "inputs": {
+    "fg": "whip1",
+    "bg": "frame_5"
+   }
+  },
+  "vignette": {
+   "op": "vignette",
+   "inputs": {
+    "source": "frame_6"
+   }
+  },
+  "grain": {
+   "op": "grain",
+   "params": {
+    "amount": 0.07
+   },
+   "inputs": {
+    "source": "vignette"
+   }
+  }
+ }
+}

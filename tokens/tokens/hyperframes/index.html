@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+        font-family: "Inter", sans-serif;
+        color: #fff;
+      }
+      #footage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        object-fit: cover;
+        z-index: 1;
+      }
+      #copy {
+        position: absolute;
+        inset: 0;
+        padding: 300px 120px;
+        z-index: 2;
+      }
+      #title {
+        font-size: 120px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1.2;
+      }
+      .line {
+        font-size: 46px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      #line1 {
+        margin-top: 12px;
+      }
+      #captions {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+      }
+      .cap-group {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 1080px;
+        padding: 0 120px;
+        text-align: center;
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 1.2;
+        opacity: 0;
+        visibility: hidden;
+        text-shadow: 0 0 6px #000, 0 4px 14px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-txxr" id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <video
+        id="footage"
+        class="clip"
+        src="assets/footage.mp4"
+        data-start="0"
+        data-duration="10"
+        data-track-index="0"
+        muted
+        playsinline
+      ></video>
+      <div data-hf-id="hf-5aa5" id="copy" class="clip" data-start="0" data-duration="10" data-track-index="1">
+        <h1 data-hf-id="hf-kx0c" id="title">Life in orbit</h1>
+        <p data-hf-id="hf-kup3" id="line1" class="line">408 km above the surface</p>
+        <p data-hf-id="hf-13jg" id="line2" class="line">28,000 km per hour</p>
+        <p data-hf-id="hf-25qb" id="line3" class="line">Seven crew on board</p>
+      </div>
+      <div data-hf-id="hf-pchh" id="captions" class="clip" data-start="0" data-duration="10" data-track-index="2" data-track-kind="captions"></div>
+    </div>
+    <script>
+      const WORDS = [
+        { text: "Every", start: 3.0, end: 3.3 },
+        { text: "ninety", start: 3.3, end: 3.7 },
+        { text: "minutes,", start: 3.7, end: 4.2 },
+        { text: "the", start: 4.4, end: 4.55 },
+        { text: "station", start: 4.55, end: 5.0 },
+        { text: "circles", start: 5.0, end: 5.45 },
+        { text: "the", start: 5.45, end: 5.6 },
+        { text: "whole", start: 5.6, end: 5.95 },
+        { text: "planet", start: 5.95, end: 6.4 },
+        { text: "once.", start: 6.4, end: 6.9 },
+        { text: "Sixteen", start: 7.3, end: 7.75 },
+        { text: "sunrises,", start: 7.75, end: 8.3 },
+        { text: "every", start: 8.45, end: 8.75 },
+        { text: "single", start: 8.75, end: 9.1 },
+        { text: "day.", start: 9.1, end: 9.6 },
+      ];
+      const GROUPS = [[0, 2], [3, 5], [6, 9], [10, 11], [12, 14]];
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#title", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.8, ease: "expo.out" }, 0.3);
+      tl.fromTo(".line", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out", stagger: 0.2 }, 1.0);
+
+      const captions = document.getElementById("captions");
+      GROUPS.forEach(([first, last], gi) => {
+        const group = document.createElement("div");
+        group.className = "cap-group";
+        group.id = "cap-group-" + gi;
+        captions.appendChild(group);
+        const start = WORDS[first].start;
+        const end = gi + 1 < GROUPS.length ? Math.min(WORDS[last].end + 0.4, WORDS[GROUPS[gi + 1][0]].start) : 10;
+        for (let i = first; i <= last; i++) {
+          const word = document.createElement("span");
+          word.id = "cap-word-" + i;
+          word.textContent = WORDS[i].text + " ";
+          group.appendChild(word);
+          tl.set(word, { color: "#ffd23f" }, WORDS[i].start);
+          tl.set(word, { color: "#ffffff" }, WORDS[i].end);
+        }
+        tl.set(group, { visibility: "visible" }, start);
+        tl.fromTo(group, { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "power2.out" }, start);
+        tl.to(group, { opacity: 0, duration: 0.12, ease: "power2.in" }, end - 0.12);
+        tl.set(group, { opacity: 0, visibility: "hidden" }, end);
+      });
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

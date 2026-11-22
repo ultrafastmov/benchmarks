@@ -1,0 +1,31 @@
+{
+  "timeline": {
+    "fonts": [
+      { "src": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" },
+      { "src": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf" },
+      { "src": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf" }
+    ],
+    "tracks": [
+      { "clips": [ { "asset": { "type": "rich-caption", "src": "https://example.com/short/captions.srt",
+          "font": { "family": "UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg", "size": 72, "weight": 800, "color": "#ffffff" }, "stroke": { "width": 4, "color": "#000000" },
+          "active": { "font": { "color": "#ffd23f" } }, "animation": { "style": "karaoke" }, "align": { "horizontal": "center", "vertical": "middle" } },
+        "start": 0, "length": "end", "width": 840, "height": 260, "offset": { "y": -0.099 } } ] },
+      { "clips": [ { "asset": { "type": "rich-text", "text": "Seven crew on board", "font": { "family": "UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg", "size": 46, "color": "#ffffff", "opacity": 0.85 },
+          "align": { "horizontal": "left", "vertical": "top" }, "animation": { "preset": "slideIn", "direction": "up", "duration": 0.6 } },
+        "start": 1.4, "length": "end", "width": 840, "height": 70, "position": "topLeft", "offset": { "x": 0.111, "y": -0.3125 } } ] },
+      { "clips": [ { "asset": { "type": "rich-text", "text": "28,000 km per hour", "font": { "family": "UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg", "size": 46, "color": "#ffffff", "opacity": 0.85 },
+          "align": { "horizontal": "left", "vertical": "top" }, "animation": { "preset": "slideIn", "direction": "up", "duration": 0.6 } },
+        "start": 1.2, "length": "end", "width": 840, "height": 70, "position": "topLeft", "offset": { "x": 0.111, "y": -0.279 } } ] },
+      { "clips": [ { "asset": { "type": "rich-text", "text": "408 km above the surface", "font": { "family": "UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg", "size": 46, "color": "#ffffff", "opacity": 0.85 },
+          "align": { "horizontal": "left", "vertical": "top" }, "animation": { "preset": "slideIn", "direction": "up", "duration": 0.6 } },
+        "start": 1.0, "length": "end", "width": 840, "height": 70, "position": "topLeft", "offset": { "x": 0.111, "y": -0.245 } } ] },
+      { "clips": [ { "asset": { "type": "rich-text", "text": "Life in orbit", "font": { "family": "UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg", "size": 120, "weight": 700, "color": "#ffffff" },
+          "style": { "letterSpacing": -3 }, "align": { "horizontal": "left", "vertical": "top" }, "animation": { "preset": "slideIn", "direction": "up", "duration": 0.8 } },
+        "start": 0.3, "length": "end", "width": 840, "height": 160, "position": "topLeft", "offset": { "x": 0.111, "y": -0.156 } } ] },
+      { "clips": [ { "asset": { "type": "video", "src": "https://example.com/short/grain.mp4" }, "start": 0, "length": "end", "opacity": 0.12 } ] },
+      { "clips": [ { "asset": { "type": "video", "src": "https://example.com/short/footage.mp4" }, "start": 0, "length": 10,
+          "filters": [ { "type": "grade", "exposure": -0.2 }, { "type": "contrast", "value": 1.15 }, { "type": "saturation", "value": 0.85 } ] } ] }
+    ]
+  },
+  "output": { "format": "mp4", "fps": 30, "size": { "width": 1080, "height": 1920 } }
+}

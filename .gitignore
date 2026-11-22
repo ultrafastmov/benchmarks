@@ -1,0 +1,13 @@
+node_modules/
+.cache/
+out/
+logs/
+tools/
+remotion/build/
+remotion/public/footage/
+remotion/public/fonts/
+hyperframes/*/assets/fonts/
+hyperframes/*/assets/footage/
+hyperframes/*/assets/gsap.min.js
+__pycache__/
+hyperframes/*/.hyperframes/

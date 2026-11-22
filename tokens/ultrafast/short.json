@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "format": { "width": 1080, "height": 1920, "fps": 30, "duration": 10 },
+  "output": "final",
+  "nodes": {
+    "footage": { "op": "video", "params": { "src": "footage.mp4", "fit": "cover" } },
+    "graded": { "op": "adjust", "inputs": { "source": "footage" }, "params": { "exposure": -0.2, "contrast": 1.15, "saturation": 0.85 } },
+    "grainy": { "op": "grain", "inputs": { "source": "graded" }, "params": { "amount": 0.09 } },
+
+    "title": { "op": "text", "params": { "text": "Life in orbit", "font": "Inter", "weight": 700, "size": 120, "tracking": -3, "color": "#ffffff",
+      "opacity": { "keys": [ { "t": 0.3, "v": 0 }, { "t": 0.9, "v": 1 } ] },
+      "position": { "keys": [ { "t": 0.3, "v": [120, 380], "ease": { "bezier": [0.16, 1, 0.3, 1] } }, { "t": 1.1, "v": [120, 300] } ] } } },
+    "line1": { "op": "text", "params": { "text": "408 km above the surface", "font": "Inter", "size": 46, "color": "#ffffffd9",
+      "opacity": { "keys": [ { "t": 1.0, "v": 0 }, { "t": 1.6, "v": 1 } ] },
+      "position": { "keys": [ { "t": 1.0, "v": [120, 500], "ease": { "bezier": [0.16, 1, 0.3, 1] } }, { "t": 1.6, "v": [120, 470] } ] } } },
+    "line2": { "op": "text", "params": { "text": "28,000 km per hour", "font": "Inter", "size": 46, "color": "#ffffffd9",
+      "opacity": { "keys": [ { "t": 1.2, "v": 0 }, { "t": 1.8, "v": 1 } ] },
+      "position": { "keys": [ { "t": 1.2, "v": [120, 565], "ease": { "bezier": [0.16, 1, 0.3, 1] } }, { "t": 1.8, "v": [120, 535] } ] } } },
+    "line3": { "op": "text", "params": { "text": "Seven crew on board", "font": "Inter", "size": 46, "color": "#ffffffd9",
+      "opacity": { "keys": [ { "t": 1.4, "v": 0 }, { "t": 2.0, "v": 1 } ] },
+      "position": { "keys": [ { "t": 1.4, "v": [120, 630], "ease": { "bezier": [0.16, 1, 0.3, 1] } }, { "t": 2.0, "v": [120, 600] } ] } } },
+
+    "captions": { "op": "captions", "params": { "font": "Inter", "weight": 800, "size": 72, "position": [540, 1150], "width": 840,
+      "words": "3.00 3.30 Every\n3.30 3.70 ninety\n3.70 4.20 minutes,\n4.40 4.55 the\n4.55 5.00 station\n5.00 5.45 circles\n5.45 5.60 the\n5.60 5.95 whole\n5.95 6.40 planet\n6.40 6.90 once.\n7.30 7.75 Sixteen\n7.75 8.30 sunrises,\n8.45 8.75 every\n8.75 9.10 single\n9.10 9.60 day." } },
+    "outlined": { "op": "stroke_outline", "inputs": { "source": "captions" }, "params": { "color": "#000000", "width": 4 } },
+
+    "l1": { "op": "over", "inputs": { "fg": "title", "bg": "grainy" } },
+    "l2": { "op": "over", "inputs": { "fg": "line1", "bg": "l1" } },
+    "l3": { "op": "over", "inputs": { "fg": "line2", "bg": "l2" } },
+    "l4": { "op": "over", "inputs": { "fg": "line3", "bg": "l3" } },
+    "final": { "op": "over", "inputs": { "fg": "outlined", "bg": "l4" } }
+  }
+}

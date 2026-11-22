@@ -1,0 +1,3535 @@
+{
+ "version": 1,
+ "format": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 10.0
+ },
+ "output": "frame_63",
+ "nodes": {
+  "bg": {
+   "op": "solid",
+   "params": {
+    "color": "#0b1020"
+   }
+  },
+  "title": {
+   "op": "text",
+   "params": {
+    "text": "Monthly active users, 2026",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 700,
+    "size": 60,
+    "color": "#ffffff",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.6,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        100
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.6,
+       "v": [
+        120,
+        80
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "subtitle": {
+   "op": "text",
+   "params": {
+    "text": "Millions, January to December",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 400,
+    "size": 30,
+    "color": "#94a3b8",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.15,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.75,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        178
+       ]
+      },
+      {
+       "t": 0.15,
+       "v": [
+        120,
+        178
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.75,
+       "v": [
+        120,
+        158
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "grid25": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#1e293b",
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        2
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0,
+        2
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        1640,
+        2
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        160,
+        750.0
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        160,
+        750.0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        980.0,
+        750.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "gridlabel25": {
+   "op": "text",
+   "params": {
+    "text": "25",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 400,
+    "size": 22,
+    "color": "#64748b",
+    "align": "right",
+    "valign": "middle",
+    "position": [
+     140,
+     750.0
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "grid50": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#1e293b",
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        2
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0,
+        2
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        1640,
+        2
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        160,
+        600.0
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        160,
+        600.0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        980.0,
+        600.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "gridlabel50": {
+   "op": "text",
+   "params": {
+    "text": "50",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 400,
+    "size": 22,
+    "color": "#64748b",
+    "align": "right",
+    "valign": "middle",
+    "position": [
+     140,
+     600.0
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "grid75": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#1e293b",
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        2
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0,
+        2
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        1640,
+        2
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        160,
+        450.0
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        160,
+        450.0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        980.0,
+        450.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "gridlabel75": {
+   "op": "text",
+   "params": {
+    "text": "75",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 400,
+    "size": 22,
+    "color": "#64748b",
+    "align": "right",
+    "valign": "middle",
+    "position": [
+     140,
+     450.0
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "grid100": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#1e293b",
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        2
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0,
+        2
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        1640,
+        2
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        160,
+        300.0
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        160,
+        300.0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        980.0,
+        300.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "gridlabel100": {
+   "op": "text",
+   "params": {
+    "text": "100",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 400,
+    "size": 22,
+    "color": "#64748b",
+    "align": "right",
+    "valign": "middle",
+    "position": [
+     140,
+     300.0
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "baseline": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#475569",
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        3
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0,
+        3
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        1640,
+        3
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        160,
+        900
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        160,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        980.0,
+        900
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "bar0": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 0.8,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.6,
+       "v": [
+        84,
+        72.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        228.33333333333331,
+        900
+       ]
+      },
+      {
+       "t": 0.8,
+       "v": [
+        228.33333333333331,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.6,
+       "v": [
+        228.33333333333331,
+        864.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value0": {
+   "op": "text",
+   "params": {
+    "text": "12",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.8,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.6,
+       "v": 12
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.8,
+       "v": 0
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        228.33333333333331,
+        888
+       ]
+      },
+      {
+       "t": 0.8,
+       "v": [
+        228.33333333333331,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.6,
+       "v": [
+        228.33333333333331,
+        816.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month0": {
+   "op": "text",
+   "params": {
+    "text": "Jan",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     228.33333333333331,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar1": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 0.92,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7200000000000002,
+       "v": [
+        84,
+        108.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        365.0,
+        900
+       ]
+      },
+      {
+       "t": 0.92,
+       "v": [
+        365.0,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7200000000000002,
+       "v": [
+        365.0,
+        846.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value1": {
+   "op": "text",
+   "params": {
+    "text": "18",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.92,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7200000000000002,
+       "v": 18
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.92,
+       "v": 0
+      },
+      {
+       "t": 1.12,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        365.0,
+        888
+       ]
+      },
+      {
+       "t": 0.92,
+       "v": [
+        365.0,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7200000000000002,
+       "v": [
+        365.0,
+        780.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month1": {
+   "op": "text",
+   "params": {
+    "text": "Feb",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     365.0,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar2": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.04,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.84,
+       "v": [
+        84,
+        138.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        501.66666666666663,
+        900
+       ]
+      },
+      {
+       "t": 1.04,
+       "v": [
+        501.66666666666663,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.84,
+       "v": [
+        501.66666666666663,
+        831.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value2": {
+   "op": "text",
+   "params": {
+    "text": "23",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.04,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.84,
+       "v": 23
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.04,
+       "v": 0
+      },
+      {
+       "t": 1.24,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        501.66666666666663,
+        888
+       ]
+      },
+      {
+       "t": 1.04,
+       "v": [
+        501.66666666666663,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.84,
+       "v": [
+        501.66666666666663,
+        750.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month2": {
+   "op": "text",
+   "params": {
+    "text": "Mar",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     501.66666666666663,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar3": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.1600000000000001,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.9600000000000002,
+       "v": [
+        84,
+        186.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        638.3333333333333,
+        900
+       ]
+      },
+      {
+       "t": 1.1600000000000001,
+       "v": [
+        638.3333333333333,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.9600000000000002,
+       "v": [
+        638.3333333333333,
+        807.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value3": {
+   "op": "text",
+   "params": {
+    "text": "31",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.1600000000000001,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.9600000000000002,
+       "v": 31
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.1600000000000001,
+       "v": 0
+      },
+      {
+       "t": 1.36,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        638.3333333333333,
+        888
+       ]
+      },
+      {
+       "t": 1.1600000000000001,
+       "v": [
+        638.3333333333333,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.9600000000000002,
+       "v": [
+        638.3333333333333,
+        702.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month3": {
+   "op": "text",
+   "params": {
+    "text": "Apr",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     638.3333333333333,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar4": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.28,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.08,
+       "v": [
+        84,
+        216.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        775.0,
+        900
+       ]
+      },
+      {
+       "t": 1.28,
+       "v": [
+        775.0,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.08,
+       "v": [
+        775.0,
+        792.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value4": {
+   "op": "text",
+   "params": {
+    "text": "36",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.28,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.08,
+       "v": 36
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.28,
+       "v": 0
+      },
+      {
+       "t": 1.48,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        775.0,
+        888
+       ]
+      },
+      {
+       "t": 1.28,
+       "v": [
+        775.0,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.08,
+       "v": [
+        775.0,
+        672.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month4": {
+   "op": "text",
+   "params": {
+    "text": "May",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     775.0,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar5": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.4,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.2,
+       "v": [
+        84,
+        264.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        911.6666666666666,
+        900
+       ]
+      },
+      {
+       "t": 1.4,
+       "v": [
+        911.6666666666666,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.2,
+       "v": [
+        911.6666666666666,
+        768.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value5": {
+   "op": "text",
+   "params": {
+    "text": "44",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.4,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.2,
+       "v": 44
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.4,
+       "v": 0
+      },
+      {
+       "t": 1.5999999999999999,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        911.6666666666666,
+        888
+       ]
+      },
+      {
+       "t": 1.4,
+       "v": [
+        911.6666666666666,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.2,
+       "v": [
+        911.6666666666666,
+        624.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month5": {
+   "op": "text",
+   "params": {
+    "text": "Jun",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     911.6666666666666,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar6": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.52,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.3200000000000003,
+       "v": [
+        84,
+        312.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1048.3333333333333,
+        900
+       ]
+      },
+      {
+       "t": 1.52,
+       "v": [
+        1048.3333333333333,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.3200000000000003,
+       "v": [
+        1048.3333333333333,
+        744.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value6": {
+   "op": "text",
+   "params": {
+    "text": "52",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.52,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.3200000000000003,
+       "v": 52
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.52,
+       "v": 0
+      },
+      {
+       "t": 1.72,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1048.3333333333333,
+        888
+       ]
+      },
+      {
+       "t": 1.52,
+       "v": [
+        1048.3333333333333,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.3200000000000003,
+       "v": [
+        1048.3333333333333,
+        576.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month6": {
+   "op": "text",
+   "params": {
+    "text": "Jul",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1048.3333333333333,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar7": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.6400000000000001,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.4400000000000004,
+       "v": [
+        84,
+        342.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1185.0,
+        900
+       ]
+      },
+      {
+       "t": 1.6400000000000001,
+       "v": [
+        1185.0,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.4400000000000004,
+       "v": [
+        1185.0,
+        729.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value7": {
+   "op": "text",
+   "params": {
+    "text": "57",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.6400000000000001,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.4400000000000004,
+       "v": 57
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.6400000000000001,
+       "v": 0
+      },
+      {
+       "t": 1.84,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1185.0,
+        888
+       ]
+      },
+      {
+       "t": 1.6400000000000001,
+       "v": [
+        1185.0,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.4400000000000004,
+       "v": [
+        1185.0,
+        546.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month7": {
+   "op": "text",
+   "params": {
+    "text": "Aug",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1185.0,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar8": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.76,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.56,
+       "v": [
+        84,
+        378.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1321.6666666666665,
+        900
+       ]
+      },
+      {
+       "t": 1.76,
+       "v": [
+        1321.6666666666665,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.56,
+       "v": [
+        1321.6666666666665,
+        711.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value8": {
+   "op": "text",
+   "params": {
+    "text": "63",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.76,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.56,
+       "v": 63
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.76,
+       "v": 0
+      },
+      {
+       "t": 1.96,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1321.6666666666665,
+        888
+       ]
+      },
+      {
+       "t": 1.76,
+       "v": [
+        1321.6666666666665,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.56,
+       "v": [
+        1321.6666666666665,
+        510.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month8": {
+   "op": "text",
+   "params": {
+    "text": "Sep",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1321.6666666666665,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar9": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 1.8800000000000001,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.68,
+       "v": [
+        84,
+        426.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1458.3333333333333,
+        900
+       ]
+      },
+      {
+       "t": 1.8800000000000001,
+       "v": [
+        1458.3333333333333,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.68,
+       "v": [
+        1458.3333333333333,
+        687.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value9": {
+   "op": "text",
+   "params": {
+    "text": "71",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.8800000000000001,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.68,
+       "v": 71
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.8800000000000001,
+       "v": 0
+      },
+      {
+       "t": 2.08,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1458.3333333333333,
+        888
+       ]
+      },
+      {
+       "t": 1.8800000000000001,
+       "v": [
+        1458.3333333333333,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.68,
+       "v": [
+        1458.3333333333333,
+        462.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month9": {
+   "op": "text",
+   "params": {
+    "text": "Oct",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1458.3333333333333,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar10": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 2.0,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.8,
+       "v": [
+        84,
+        480.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1595.0,
+        900
+       ]
+      },
+      {
+       "t": 2.0,
+       "v": [
+        1595.0,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.8,
+       "v": [
+        1595.0,
+        660.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value10": {
+   "op": "text",
+   "params": {
+    "text": "80",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.8,
+       "v": 80
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2.0,
+       "v": 0
+      },
+      {
+       "t": 2.2,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1595.0,
+        888
+       ]
+      },
+      {
+       "t": 2.0,
+       "v": [
+        1595.0,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.8,
+       "v": [
+        1595.0,
+        408.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month10": {
+   "op": "text",
+   "params": {
+    "text": "Nov",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1595.0,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar11": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#f472b6",
+    "radius": 6,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        84,
+        0
+       ]
+      },
+      {
+       "t": 2.12,
+       "v": [
+        84,
+        0
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.92,
+       "v": [
+        84,
+        552.0
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1731.6666666666665,
+        900
+       ]
+      },
+      {
+       "t": 2.12,
+       "v": [
+        1731.6666666666665,
+        900
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.92,
+       "v": [
+        1731.6666666666665,
+        624.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "value11": {
+   "op": "text",
+   "params": {
+    "text": "92",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 600,
+    "size": 26,
+    "color": "#ffffff",
+    "align": "center",
+    "valign": "bottom",
+    "number": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2.12,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.92,
+       "v": 92
+      }
+     ]
+    },
+    "decimals": 0,
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2.12,
+       "v": 0
+      },
+      {
+       "t": 2.3200000000000003,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        1731.6666666666665,
+        888
+       ]
+      },
+      {
+       "t": 2.12,
+       "v": [
+        1731.6666666666665,
+        888
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.92,
+       "v": [
+        1731.6666666666665,
+        336.0
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "month11": {
+   "op": "text",
+   "params": {
+    "text": "Dec",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#94a3b8",
+    "align": "center",
+    "valign": "top",
+    "position": [
+     1731.6666666666665,
+     920
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.3,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "target": {
+   "op": "path",
+   "params": {
+    "kind": "polyline",
+    "points": [
+     228.33,
+     810.0,
+     365.0,
+     780.0,
+     501.67,
+     744.0,
+     638.33,
+     720.0,
+     775.0,
+     672.0,
+     911.67,
+     648.0,
+     1048.33,
+     600.0,
+     1185.0,
+     552.0,
+     1321.67,
+     504.0,
+     1458.33,
+     468.0,
+     1595.0,
+     432.0,
+     1731.67,
+     372.0
+    ],
+    "stroke": 5,
+    "join": "round",
+    "cap": "round",
+    "color": "#fbbf24",
+    "trim_end": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 3.0,
+       "v": 0,
+       "ease": "in_out_cubic"
+      },
+      {
+       "t": 5.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot0": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     228.33,
+     810.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot1": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     365.0,
+     780.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot2": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     501.67,
+     744.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot3": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     638.33,
+     720.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot4": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     775.0,
+     672.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot5": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     911.67,
+     648.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot6": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1048.33,
+     600.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot7": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1185.0,
+     552.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot8": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1321.67,
+     504.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot9": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1458.33,
+     468.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot10": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1595.0,
+     432.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "dot11": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     16,
+     16
+    ],
+    "center": [
+     1731.67,
+     372.0
+    ],
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 5.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 5.4,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "leg_bar": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#38bdf8",
+    "radius": 3,
+    "size": [
+     22,
+     22
+    ],
+    "center": [
+     1471,
+     110
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 3.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 3.5,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "leg_bar_text": {
+   "op": "text",
+   "params": {
+    "text": "Actual",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#cbd5e1",
+    "valign": "middle",
+    "position": [
+     1494,
+     110
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 3.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 3.5,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "leg_line": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#fbbf24",
+    "radius": 2.5,
+    "size": [
+     36,
+     5
+    ],
+    "center": [
+     1638,
+     110
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 3.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 3.5,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "leg_line_text": {
+   "op": "text",
+   "params": {
+    "text": "Target",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 26,
+    "color": "#cbd5e1",
+    "valign": "middle",
+    "position": [
+     1668,
+     110
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 3.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 3.5,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "frame_0": {
+   "op": "over",
+   "inputs": {
+    "fg": "title",
+    "bg": "bg"
+   }
+  },
+  "frame_1": {
+   "op": "over",
+   "inputs": {
+    "fg": "subtitle",
+    "bg": "frame_0"
+   }
+  },
+  "frame_2": {
+   "op": "over",
+   "inputs": {
+    "fg": "grid25",
+    "bg": "frame_1"
+   }
+  },
+  "frame_3": {
+   "op": "over",
+   "inputs": {
+    "fg": "gridlabel25",
+    "bg": "frame_2"
+   }
+  },
+  "frame_4": {
+   "op": "over",
+   "inputs": {
+    "fg": "grid50",
+    "bg": "frame_3"
+   }
+  },
+  "frame_5": {
+   "op": "over",
+   "inputs": {
+    "fg": "gridlabel50",
+    "bg": "frame_4"
+   }
+  },
+  "frame_6": {
+   "op": "over",
+   "inputs": {
+    "fg": "grid75",
+    "bg": "frame_5"
+   }
+  },
+  "frame_7": {
+   "op": "over",
+   "inputs": {
+    "fg": "gridlabel75",
+    "bg": "frame_6"
+   }
+  },
+  "frame_8": {
+   "op": "over",
+   "inputs": {
+    "fg": "grid100",
+    "bg": "frame_7"
+   }
+  },
+  "frame_9": {
+   "op": "over",
+   "inputs": {
+    "fg": "gridlabel100",
+    "bg": "frame_8"
+   }
+  },
+  "frame_10": {
+   "op": "over",
+   "inputs": {
+    "fg": "baseline",
+    "bg": "frame_9"
+   }
+  },
+  "frame_11": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar0",
+    "bg": "frame_10"
+   }
+  },
+  "frame_12": {
+   "op": "over",
+   "inputs": {
+    "fg": "value0",
+    "bg": "frame_11"
+   }
+  },
+  "frame_13": {
+   "op": "over",
+   "inputs": {
+    "fg": "month0",
+    "bg": "frame_12"
+   }
+  },
+  "frame_14": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar1",
+    "bg": "frame_13"
+   }
+  },
+  "frame_15": {
+   "op": "over",
+   "inputs": {
+    "fg": "value1",
+    "bg": "frame_14"
+   }
+  },
+  "frame_16": {
+   "op": "over",
+   "inputs": {
+    "fg": "month1",
+    "bg": "frame_15"
+   }
+  },
+  "frame_17": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar2",
+    "bg": "frame_16"
+   }
+  },
+  "frame_18": {
+   "op": "over",
+   "inputs": {
+    "fg": "value2",
+    "bg": "frame_17"
+   }
+  },
+  "frame_19": {
+   "op": "over",
+   "inputs": {
+    "fg": "month2",
+    "bg": "frame_18"
+   }
+  },
+  "frame_20": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar3",
+    "bg": "frame_19"
+   }
+  },
+  "frame_21": {
+   "op": "over",
+   "inputs": {
+    "fg": "value3",
+    "bg": "frame_20"
+   }
+  },
+  "frame_22": {
+   "op": "over",
+   "inputs": {
+    "fg": "month3",
+    "bg": "frame_21"
+   }
+  },
+  "frame_23": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar4",
+    "bg": "frame_22"
+   }
+  },
+  "frame_24": {
+   "op": "over",
+   "inputs": {
+    "fg": "value4",
+    "bg": "frame_23"
+   }
+  },
+  "frame_25": {
+   "op": "over",
+   "inputs": {
+    "fg": "month4",
+    "bg": "frame_24"
+   }
+  },
+  "frame_26": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar5",
+    "bg": "frame_25"
+   }
+  },
+  "frame_27": {
+   "op": "over",
+   "inputs": {
+    "fg": "value5",
+    "bg": "frame_26"
+   }
+  },
+  "frame_28": {
+   "op": "over",
+   "inputs": {
+    "fg": "month5",
+    "bg": "frame_27"
+   }
+  },
+  "frame_29": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar6",
+    "bg": "frame_28"
+   }
+  },
+  "frame_30": {
+   "op": "over",
+   "inputs": {
+    "fg": "value6",
+    "bg": "frame_29"
+   }
+  },
+  "frame_31": {
+   "op": "over",
+   "inputs": {
+    "fg": "month6",
+    "bg": "frame_30"
+   }
+  },
+  "frame_32": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar7",
+    "bg": "frame_31"
+   }
+  },
+  "frame_33": {
+   "op": "over",
+   "inputs": {
+    "fg": "value7",
+    "bg": "frame_32"
+   }
+  },
+  "frame_34": {
+   "op": "over",
+   "inputs": {
+    "fg": "month7",
+    "bg": "frame_33"
+   }
+  },
+  "frame_35": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar8",
+    "bg": "frame_34"
+   }
+  },
+  "frame_36": {
+   "op": "over",
+   "inputs": {
+    "fg": "value8",
+    "bg": "frame_35"
+   }
+  },
+  "frame_37": {
+   "op": "over",
+   "inputs": {
+    "fg": "month8",
+    "bg": "frame_36"
+   }
+  },
+  "frame_38": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar9",
+    "bg": "frame_37"
+   }
+  },
+  "frame_39": {
+   "op": "over",
+   "inputs": {
+    "fg": "value9",
+    "bg": "frame_38"
+   }
+  },
+  "frame_40": {
+   "op": "over",
+   "inputs": {
+    "fg": "month9",
+    "bg": "frame_39"
+   }
+  },
+  "frame_41": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar10",
+    "bg": "frame_40"
+   }
+  },
+  "frame_42": {
+   "op": "over",
+   "inputs": {
+    "fg": "value10",
+    "bg": "frame_41"
+   }
+  },
+  "frame_43": {
+   "op": "over",
+   "inputs": {
+    "fg": "month10",
+    "bg": "frame_42"
+   }
+  },
+  "frame_44": {
+   "op": "over",
+   "inputs": {
+    "fg": "bar11",
+    "bg": "frame_43"
+   }
+  },
+  "frame_45": {
+   "op": "over",
+   "inputs": {
+    "fg": "value11",
+    "bg": "frame_44"
+   }
+  },
+  "frame_46": {
+   "op": "over",
+   "inputs": {
+    "fg": "month11",
+    "bg": "frame_45"
+   }
+  },
+  "frame_47": {
+   "op": "over",
+   "inputs": {
+    "fg": "target",
+    "bg": "frame_46"
+   }
+  },
+  "frame_48": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot0",
+    "bg": "frame_47"
+   }
+  },
+  "frame_49": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot1",
+    "bg": "frame_48"
+   }
+  },
+  "frame_50": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot2",
+    "bg": "frame_49"
+   }
+  },
+  "frame_51": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot3",
+    "bg": "frame_50"
+   }
+  },
+  "frame_52": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot4",
+    "bg": "frame_51"
+   }
+  },
+  "frame_53": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot5",
+    "bg": "frame_52"
+   }
+  },
+  "frame_54": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot6",
+    "bg": "frame_53"
+   }
+  },
+  "frame_55": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot7",
+    "bg": "frame_54"
+   }
+  },
+  "frame_56": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot8",
+    "bg": "frame_55"
+   }
+  },
+  "frame_57": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot9",
+    "bg": "frame_56"
+   }
+  },
+  "frame_58": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot10",
+    "bg": "frame_57"
+   }
+  },
+  "frame_59": {
+   "op": "over",
+   "inputs": {
+    "fg": "dot11",
+    "bg": "frame_58"
+   }
+  },
+  "frame_60": {
+   "op": "over",
+   "inputs": {
+    "fg": "leg_bar",
+    "bg": "frame_59"
+   }
+  },
+  "frame_61": {
+   "op": "over",
+   "inputs": {
+    "fg": "leg_bar_text",
+    "bg": "frame_60"
+   }
+  },
+  "frame_62": {
+   "op": "over",
+   "inputs": {
+    "fg": "leg_line",
+    "bg": "frame_61"
+   }
+  },
+  "frame_63": {
+   "op": "over",
+   "inputs": {
+    "fg": "leg_line_text",
+    "bg": "frame_62"
+   }
+  }
+ }
+}

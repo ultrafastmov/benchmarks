@@ -1,0 +1,74 @@
+{
+ "title": {
+  "remotion": {
+   "ssim_all": 0.988863,
+   "psnr_avg_db": 29.891148
+  },
+  "hyperframes": {
+   "ssim_all": 0.984902,
+   "psnr_avg_db": 29.041511
+  },
+  "remotion fastest (bundled-vulkan-nvenc-c24)": {
+   "ssim_all": 0.989475,
+   "psnr_avg_db": 30.012407
+  },
+  "hyperframes fastest (w8)": {
+   "ssim_all": 0.984893,
+   "psnr_avg_db": 29.04143
+  }
+ },
+ "chart": {
+  "remotion": {
+   "ssim_all": 0.992791,
+   "psnr_avg_db": 34.59956
+  },
+  "hyperframes": {
+   "ssim_all": 0.991026,
+   "psnr_avg_db": 34.041912
+  },
+  "remotion fastest (bundled-angle-egl-c16)": {
+   "ssim_all": 0.992791,
+   "psnr_avg_db": 34.599453
+  },
+  "hyperframes fastest (w4)": {
+   "ssim_all": 0.991026,
+   "psnr_avg_db": 34.041912
+  }
+ },
+ "footage": {
+  "remotion": {
+   "ssim_all": 0.94862,
+   "psnr_avg_db": 27.541477
+  },
+  "hyperframes": {
+   "ssim_all": 0.936437,
+   "psnr_avg_db": 25.845303
+  },
+  "remotion fastest (bundled-vulkan-nvenc-c8)": {
+   "ssim_all": 0.948841,
+   "psnr_avg_db": 27.559349
+  },
+  "hyperframes fastest (w8)": {
+   "ssim_all": 0.936437,
+   "psnr_avg_db": 25.845303
+  }
+ },
+ "effects": {
+  "remotion": {
+   "ssim_all": 0.625479,
+   "psnr_avg_db": 25.235625
+  },
+  "hyperframes": {
+   "ssim_all": 0.625831,
+   "psnr_avg_db": 25.504757
+  },
+  "remotion fastest (bundled-vulkan-nvenc-c12)": {
+   "ssim_all": 0.639815,
+   "psnr_avg_db": 25.375617
+  },
+  "hyperframes fastest (w12)": {
+   "ssim_all": 0.625821,
+   "psnr_avg_db": 25.504631
+  }
+ }
+}

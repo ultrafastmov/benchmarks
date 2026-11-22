@@ -1,0 +1,563 @@
+{
+ "version": 1,
+ "format": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 10.0
+ },
+ "output": "frame_3",
+ "nodes": {
+  "bg": {
+   "op": "gradient",
+   "params": {
+    "kind": "linear",
+    "a": "#1e1b4b",
+    "b": "#be185d",
+    "start": [
+     0,
+     0
+    ],
+    "end": [
+     0,
+     1920
+    ],
+    "space": "srgb"
+   }
+  },
+  "sun": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#fbbf24",
+    "size": [
+     640,
+     640
+    ],
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        760,
+        560
+       ]
+      },
+      {
+       "t": 10,
+       "v": [
+        700,
+        640
+       ]
+      }
+     ]
+    },
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.9,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "tile": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#22d3ee",
+    "size": [
+     520,
+     520
+    ],
+    "radius": 72,
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        -360,
+        1700
+       ]
+      },
+      {
+       "t": 0.3,
+       "v": [
+        -360,
+        1700
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.2,
+       "v": [
+        250,
+        1700
+       ]
+      }
+     ]
+    },
+    "rotation": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 8
+      },
+      {
+       "t": 10,
+       "v": 20
+      }
+     ]
+    }
+   }
+  },
+  "ring": {
+   "op": "shape",
+   "params": {
+    "kind": "circle",
+    "color": "#ffffff",
+    "size": [
+     220,
+     220
+    ],
+    "stroke": 10,
+    "center": [
+     250,
+     560
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.4,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.0,
+       "v": 0.9
+      }
+     ]
+    },
+    "scale": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.6
+      },
+      {
+       "t": 1.4,
+       "v": 0.6,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.0,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "bar": {
+   "op": "shape",
+   "params": {
+    "kind": "rect",
+    "color": "#ffffff",
+    "radius": 7,
+    "size": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0,
+        14
+       ]
+      },
+      {
+       "t": 1.0,
+       "v": [
+        0,
+        14
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.5,
+       "v": [
+        160,
+        14
+       ]
+      }
+     ]
+    },
+    "center": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        1000
+       ]
+      },
+      {
+       "t": 1.0,
+       "v": [
+        120,
+        1000
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.5,
+       "v": [
+        200,
+        1000
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "kicker": {
+   "op": "text",
+   "params": {
+    "text": "NEW DROP \u00b7 2026",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 500,
+    "size": 40,
+    "tracking": 6,
+    "color": "#ffffffcc",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.8,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.3,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        1060
+       ]
+      },
+      {
+       "t": 0.8,
+       "v": [
+        120,
+        1060
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.3,
+       "v": [
+        120,
+        1030
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "line1": {
+   "op": "text",
+   "params": {
+    "text": "Make it",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 190,
+    "color": "#ffffff",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        1170
+       ]
+      },
+      {
+       "t": 1.0,
+       "v": [
+        120,
+        1170
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.7,
+       "v": [
+        120,
+        1090
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "line2": {
+   "op": "text",
+   "params": {
+    "text": "move.",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 190,
+    "color": "#fbbf24",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 1.15,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.85,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        1360
+       ]
+      },
+      {
+       "t": 1.15,
+       "v": [
+        120,
+        1360
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 1.85,
+       "v": [
+        120,
+        1280
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "sub": {
+   "op": "text",
+   "params": {
+    "text": "Ten seconds. One render.",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 500,
+    "size": 52,
+    "color": "#ffffffd9",
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 2.0,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.6,
+       "v": 1
+      }
+     ]
+    },
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        120,
+        1520
+       ]
+      },
+      {
+       "t": 2.0,
+       "v": [
+        120,
+        1520
+       ],
+       "ease": "out_cubic"
+      },
+      {
+       "t": 2.6,
+       "v": [
+        120,
+        1500
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "copy_0": {
+   "op": "over",
+   "inputs": {
+    "fg": "kicker",
+    "bg": "bar"
+   }
+  },
+  "copy_1": {
+   "op": "over",
+   "inputs": {
+    "fg": "line1",
+    "bg": "copy_0"
+   }
+  },
+  "copy_2": {
+   "op": "over",
+   "inputs": {
+    "fg": "line2",
+    "bg": "copy_1"
+   }
+  },
+  "copy_3": {
+   "op": "over",
+   "inputs": {
+    "fg": "sub",
+    "bg": "copy_2"
+   }
+  },
+  "copy_fade": {
+   "op": "opacity",
+   "params": {
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 1
+      },
+      {
+       "t": 8.8,
+       "v": 1,
+       "ease": "in_cubic"
+      },
+      {
+       "t": 9.6,
+       "v": 0
+      }
+     ]
+    }
+   },
+   "inputs": {
+    "source": "copy_3"
+   }
+  },
+  "copy_move": {
+   "op": "transform",
+   "params": {
+    "anchor": [
+     540,
+     960
+    ],
+    "position": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        540,
+        960
+       ]
+      },
+      {
+       "t": 8.8,
+       "v": [
+        540,
+        960
+       ],
+       "ease": "in_cubic"
+      },
+      {
+       "t": 9.6,
+       "v": [
+        540,
+        900
+       ]
+      }
+     ]
+    }
+   },
+   "inputs": {
+    "source": "copy_fade"
+   }
+  },
+  "frame_0": {
+   "op": "over",
+   "inputs": {
+    "fg": "sun",
+    "bg": "bg"
+   }
+  },
+  "frame_1": {
+   "op": "over",
+   "inputs": {
+    "fg": "tile",
+    "bg": "frame_0"
+   }
+  },
+  "frame_2": {
+   "op": "over",
+   "inputs": {
+    "fg": "ring",
+    "bg": "frame_1"
+   }
+  },
+  "frame_3": {
+   "op": "over",
+   "inputs": {
+    "fg": "copy_move",
+    "bg": "frame_2"
+   }
+  }
+ }
+}

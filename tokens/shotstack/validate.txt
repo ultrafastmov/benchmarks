@@ -1,0 +1,5 @@
+$ shotstack validate edit.json   # @shotstack/cli 0.17.0, offline, no account
+✗ Edit JSON failed validation (1 error):
+  ✗ timeline.tracks[6].clips[0].filters: unrecognized key 'filters'
+
+Note: clip 'filters' is defined in Shotstack's current API reference (https://shotstack.io/docs/api/#tocs_filter, api.edit.json) and in @shotstack/schemas 1.27.0, but the CLI 0.17.0 validator rejects it. Without it the grade falls back to the single 'filter' preset enum (none|blur|boost|contrast|darken|greyscale|lighten|muted|negative).

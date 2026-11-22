@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- (a) 1080x1920 social title card. See ../../SPEC.md. -->
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("assets/fonts/Geist-VF.ttf") format("truetype");
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: "Geist Mono";
+        src: url("assets/fonts/GeistMono-VF.ttf") format("truetype");
+        font-weight: 100 900;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root {
+        position: relative; width: 1080px; height: 1920px; overflow: hidden;
+        background: linear-gradient(180deg, #1e1b4b, #be185d);
+      }
+      .abs { position: absolute; }
+      .text { position: absolute; white-space: pre; line-height: normal; }
+      #sun { left: 440px; top: 240px; width: 640px; height: 640px; border-radius: 50%; background: #fbbf24; }
+      #tile { left: -10px; top: 1440px; width: 520px; height: 520px; border-radius: 72px; background: #22d3ee; }
+      #ring { left: 140px; top: 450px; width: 220px; height: 220px; border: 10px solid #fff; border-radius: 50%; }
+      #copy { position: absolute; inset: 0; }
+      #bar { left: 120px; top: 993px; width: 0; height: 14px; border-radius: 7px; background: #fff; }
+      #kicker { left: 120px; top: 1030px; font: 500 40px "Geist Mono"; letter-spacing: 6px; color: rgba(255,255,255,0.8); }
+      #line1 { left: 120px; top: 1090px; font: 800 190px "Geist"; color: #fff; }
+      #line2 { left: 120px; top: 1280px; font: 800 190px "Geist"; color: #fbbf24; }
+      #sub { left: 120px; top: 1500px; font: 500 52px "Geist"; color: rgba(255,255,255,0.85); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <div id="sun" class="abs"></div>
+      <div id="tile" class="abs"></div>
+      <div id="ring" class="abs"></div>
+      <div id="copy">
+        <div id="bar" class="abs"></div>
+        <div id="kicker" class="text">NEW DROP · 2026</div>
+        <div id="line1" class="text">Make it</div>
+        <div id="line2" class="text">move.</div>
+        <div id="sub" class="text">Ten seconds. One render.</div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power2.out"; // cubic ease-out, as in the other two tools
+      tl.fromTo("#sun", { scale: 0 }, { scale: 1, duration: 0.9, ease: E }, 0);
+      tl.fromTo("#sun", { x: 0, y: 0 }, { x: -60, y: 80, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#tile", { x: -610 }, { x: 0, duration: 0.9, ease: E }, 0.3);
+      tl.fromTo("#tile", { rotation: 8 }, { rotation: 20, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#ring", { opacity: 0, scale: 0.6 }, { opacity: 0.9, scale: 1, duration: 0.6, ease: E }, 1.4);
+      tl.fromTo("#bar", { width: 0 }, { width: 160, duration: 0.5, ease: E }, 1.0);
+      tl.fromTo("#kicker", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 0.8);
+      tl.fromTo("#line1", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 1.0);
+      tl.fromTo("#line2", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 1.15);
+      tl.fromTo("#sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 2.0);
+      tl.fromTo("#copy", { opacity: 1, y: 0 }, { opacity: 0, y: -60, duration: 0.8, ease: "power2.in" }, 8.8);
+      tl.set({}, {}, 10); // the timeline runs the full 10 s
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

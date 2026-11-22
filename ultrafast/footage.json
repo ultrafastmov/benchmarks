@@ -1,0 +1,233 @@
+{
+ "version": 1,
+ "format": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 10.0
+ },
+ "output": "frame_5",
+ "nodes": {
+  "clip": {
+   "op": "video",
+   "params": {
+    "src": "../assets/footage/orion_moon_fd20.mp4",
+    "start": 0,
+    "fit": "fill",
+    "rect": {
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        -1166.667,
+        0.0,
+        3413.333,
+        1920.0
+       ]
+      },
+      {
+       "t": 10,
+       "v": [
+        -1303.2,
+        -76.8,
+        3686.4,
+        2073.6
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "shade": {
+   "op": "gradient",
+   "params": {
+    "kind": "linear",
+    "stops": "0:#00000000, 1:#000000cc",
+    "start": [
+     0,
+     1100
+    ],
+    "end": [
+     0,
+     1920
+    ],
+    "space": "srgb"
+   }
+  },
+  "label": {
+   "op": "text",
+   "params": {
+    "text": "NASA \u00b7 ARTEMIS I \u00b7 FLIGHT DAY 20",
+    "font": "../assets/fonts/GeistMono-VF.ttf",
+    "weight": 500,
+    "size": 30,
+    "tracking": 4,
+    "color": "#ffffffd9",
+    "align": "center",
+    "position": [
+     540,
+     140
+    ],
+    "opacity": {
+     "keys": [
+      {
+       "t": 0,
+       "v": 0
+      },
+      {
+       "t": 0.2,
+       "v": 0,
+       "ease": "out_cubic"
+      },
+      {
+       "t": 0.8,
+       "v": 1
+      }
+     ]
+    }
+   }
+  },
+  "caption0": {
+   "op": "captions",
+   "params": {
+    "words": "0.40 0.70 Day\n0.70 1.10 twenty\n1.10 1.30 of\n1.30 1.90 Artemis\n1.90 2.80 I.",
+    "style": "karaoke",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 72,
+    "color": "#ffffff",
+    "highlight": "#ffd23f",
+    "width": 880,
+    "max_lines": 2,
+    "line_height": 1.18,
+    "position": [
+     540,
+     1450
+    ],
+    "safe": "none",
+    "linger": 5
+   },
+   "timing": {
+    "in": 0.4,
+    "out": 2.8
+   }
+  },
+  "caption1": {
+   "op": "captions",
+   "params": {
+    "words": "2.80 3.30 Orion\n3.30 3.75 closes\n3.75 3.95 in\n3.95 4.15 on\n4.15 4.35 the\n4.35 5.40 Moon",
+    "style": "karaoke",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 72,
+    "color": "#ffffff",
+    "highlight": "#ffd23f",
+    "width": 880,
+    "max_lines": 2,
+    "line_height": 1.18,
+    "position": [
+     540,
+     1450
+    ],
+    "safe": "none",
+    "linger": 5
+   },
+   "timing": {
+    "in": 2.8,
+    "out": 5.4
+   }
+  },
+  "caption2": {
+   "op": "captions",
+   "params": {
+    "words": "5.40 5.75 ahead\n5.75 5.90 of\n5.90 6.10 its\n6.10 6.55 return\n6.55 7.05 flyby\n7.05 7.90 burn.",
+    "style": "karaoke",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 72,
+    "color": "#ffffff",
+    "highlight": "#ffd23f",
+    "width": 880,
+    "max_lines": 2,
+    "line_height": 1.18,
+    "position": [
+     540,
+     1450
+    ],
+    "safe": "none",
+    "linger": 5
+   },
+   "timing": {
+    "in": 5.4,
+    "out": 7.9
+   }
+  },
+  "caption3": {
+   "op": "captions",
+   "params": {
+    "words": "7.90 8.60 Splashdown\n8.60 8.80 is\n8.80 9.30 December\n9.30 10.00 11.",
+    "style": "karaoke",
+    "font": "../assets/fonts/Geist-VF.ttf",
+    "weight": 800,
+    "size": 72,
+    "color": "#ffffff",
+    "highlight": "#ffd23f",
+    "width": 880,
+    "max_lines": 2,
+    "line_height": 1.18,
+    "position": [
+     540,
+     1450
+    ],
+    "safe": "none",
+    "linger": 5
+   },
+   "timing": {
+    "in": 7.9,
+    "out": 10.0
+   }
+  },
+  "frame_0": {
+   "op": "over",
+   "inputs": {
+    "fg": "shade",
+    "bg": "clip"
+   }
+  },
+  "frame_1": {
+   "op": "over",
+   "inputs": {
+    "fg": "label",
+    "bg": "frame_0"
+   }
+  },
+  "frame_2": {
+   "op": "over",
+   "inputs": {
+    "fg": "caption0",
+    "bg": "frame_1"
+   }
+  },
+  "frame_3": {
+   "op": "over",
+   "inputs": {
+    "fg": "caption1",
+    "bg": "frame_2"
+   }
+  },
+  "frame_4": {
+   "op": "over",
+   "inputs": {
+    "fg": "caption2",
+    "bg": "frame_3"
+   }
+  },
+  "frame_5": {
+   "op": "over",
+   "inputs": {
+    "fg": "caption3",
+    "bg": "frame_4"
+   }
+  }
+ }
+}
