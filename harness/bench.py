@@ -449,6 +449,8 @@ def run_once(phase, tool, config, comp, kind, index, argv, cwd, out, check_video
     elif os.path.exists(out):
         os.remove(out)
     for attempt in range(1, 6):
+        if kind == "cold" and attempt > 1:
+            reset_caches(tool)  # the discarded attempt filled the caches; a retry has to start cold too
         quiet = wait_quiet()
         rid = uuid.uuid4().hex[:10]
         res_path = os.path.join(LOGS, f"{rid}.result.json")

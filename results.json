@@ -1,5 +1,5 @@
 {
- "about": "Render-speed benchmark: ultrafast 0.1.1 vs Remotion vs HyperFrames on one machine. Times are wall-clock seconds for the whole CLI command (start to finished MP4); see README.md for the method.",
+ "about": "Render-speed benchmark: ultrafast 0.2.0 vs Remotion vs HyperFrames on one machine. Times are wall-clock seconds for the whole CLI command (start to finished MP4); see README.md for the method.",
  "environment": {
   "cpu": {
    "model": "AMD Ryzen 9 9950X3D2 16-Core Processor",
@@ -16,8 +16,8 @@
   "ffmpeg_system": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
   "ffmpeg_hyperframes": "ffmpeg version n9.0.2-61-gd59078794d-20261121 Copyright (c) 2000-2026 the FFmpeg developers",
   "ultrafast": {
-   "version": "ultrafast 0.1.1",
-   "binary_sha256": "409b020e9a6e85e46a252248291111bec3fec2a0dab5a87bee94164d9b0c2b23",
+   "version": "ultrafast 0.2.0",
+   "binary_sha256": "ba045ae42109209cb776078b059ed441e6f511d5242bd895e36cea7a0c7fc978",
    "device": "backend: vulkan\ndevice:  NVIDIA GeForce RTX 5090"
   },
   "remotion": {
@@ -37,16 +37,16 @@
  "crf": 18,
  "headline": {
   "title": {
-   "ultrafast_s": 0.851,
-   "ultrafast_cold_s": 2.4893,
+   "ultrafast_s": 0.66,
+   "ultrafast_cold_s": 1.7676,
    "remotion": {
     "default_s": 4.727,
     "default_cold_s": 8.463,
     "best_s": 2.323,
     "best_config": "bundled-vulkan-nvenc-c24",
     "best_label": "prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 24",
-    "speedup_vs_default": 5.6,
-    "speedup_vs_best": 2.7
+    "speedup_vs_default": 7.2,
+    "speedup_vs_best": 3.5
    },
    "hyperframes": {
     "default_s": 3.917,
@@ -54,21 +54,21 @@
     "best_s": 3.531,
     "best_config": "w8",
     "best_label": "--workers 8",
-    "speedup_vs_default": 4.6,
-    "speedup_vs_best": 4.1
+    "speedup_vs_default": 5.9,
+    "speedup_vs_best": 5.3
    }
   },
   "chart": {
-   "ultrafast_s": 0.88,
-   "ultrafast_cold_s": 2.6251,
+   "ultrafast_s": 0.718,
+   "ultrafast_cold_s": 2.0909,
    "remotion": {
     "default_s": 4.452,
     "default_cold_s": 8.4142,
     "best_s": 2.245,
     "best_config": "bundled-angle-egl-c16",
     "best_label": "prebuilt bundle, --gl=angle-egl, --concurrency 16",
-    "speedup_vs_default": 5.1,
-    "speedup_vs_best": 2.6
+    "speedup_vs_default": 6.2,
+    "speedup_vs_best": 3.1
    },
    "hyperframes": {
     "default_s": 3.71,
@@ -76,21 +76,21 @@
     "best_s": 3.312,
     "best_config": "w4",
     "best_label": "--workers 4",
-    "speedup_vs_default": 4.2,
-    "speedup_vs_best": 3.8
+    "speedup_vs_default": 5.2,
+    "speedup_vs_best": 4.6
    }
   },
   "footage": {
-   "ultrafast_s": 0.985,
-   "ultrafast_cold_s": 2.6187,
+   "ultrafast_s": 0.782,
+   "ultrafast_cold_s": 1.9903,
    "remotion": {
     "default_s": 8.528,
     "default_cold_s": 12.5562,
     "best_s": 6.694,
     "best_config": "bundled-vulkan-nvenc-c8",
     "best_label": "prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 8",
-    "speedup_vs_default": 8.7,
-    "speedup_vs_best": 6.8
+    "speedup_vs_default": 10.9,
+    "speedup_vs_best": 8.6
    },
    "hyperframes": {
     "default_s": 5.051,
@@ -98,21 +98,21 @@
     "best_s": 4.462,
     "best_config": "w8",
     "best_label": "--workers 8",
-    "speedup_vs_default": 5.1,
-    "speedup_vs_best": 4.5
+    "speedup_vs_default": 6.5,
+    "speedup_vs_best": 5.7
    }
   },
   "effects": {
-   "ultrafast_s": 0.966,
-   "ultrafast_cold_s": 2.5446,
+   "ultrafast_s": 0.739,
+   "ultrafast_cold_s": 2.0053,
    "remotion": {
     "default_s": 5.95,
     "default_cold_s": 9.688,
     "best_s": 2.978,
     "best_config": "bundled-vulkan-nvenc-c12",
     "best_label": "prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 12",
-    "speedup_vs_default": 6.2,
-    "speedup_vs_best": 3.1
+    "speedup_vs_default": 8.1,
+    "speedup_vs_best": 4.0
    },
    "hyperframes": {
     "default_s": 6.417,
@@ -120,21 +120,22 @@
     "best_s": 5.233,
     "best_config": "w12",
     "best_label": "--workers 12",
-    "speedup_vs_default": 6.6,
-    "speedup_vs_best": 5.4
+    "speedup_vs_default": 8.7,
+    "speedup_vs_best": 7.1
    }
   }
  },
  "machine_quiet": {
   "runs_counted": 560,
-  "runs_discarded_for_other_load": 0,
+  "runs_discarded_for_other_load": 3,
+  "runs_set_aside_invalid": 1,
   "runs_failed": 0,
   "busy_threads_before_median": 0.19,
   "busy_threads_before_max": 1.45,
-  "loadavg1_before_median": 2.75,
+  "loadavg1_before_median": 2.62,
   "loadavg1_before_max": 18.51,
-  "other_cpu_threads_during_median": 0.19,
-  "other_cpu_threads_during_max": 1.05,
+  "other_cpu_threads_during_median": 0.2,
+  "other_cpu_threads_during_max": 1.11,
   "note": "busy threads: CPU use of the whole machine over 3 s just before a run (nothing of the benchmark's running); load average also counts the benchmark's own previous run, so it is recorded but not used to gate runs; other CPU during a run: machine CPU minus the run's own cgroup. Runs with more than 1.5 threads of other load, or with another renderer working, were discarded and repeated."
  },
  "measured": {
@@ -143,27 +144,27 @@
     "default": {
      "warm_s": {
       "n": 5,
-      "median": 0.851,
-      "min": 0.841,
-      "max": 0.863,
-      "stdev": 0.008
+      "median": 0.66,
+      "min": 0.654,
+      "max": 0.713,
+      "stdev": 0.027
      },
      "warm_runs_s": [
-      0.8534,
-      0.8511,
-      0.8497,
-      0.8409,
-      0.8628
+      0.6598,
+      0.7126,
+      0.6538,
+      0.6563,
+      0.6982
      ],
-     "cold_s": 2.4893,
-     "cpu_threads_avg": 0.73,
-     "cpu_s": 0.62,
-     "peak_ram_mib": 85,
-     "peak_ram_mib_max": 121,
-     "gpu_util_mean": 7.2,
-     "gpu_encoder_util_mean": 8.2,
-     "gpu_mem_delta_mib": 1091,
-     "other_load_threads_avg": 0.13,
+     "cold_s": 1.7676,
+     "cpu_threads_avg": 0.92,
+     "cpu_s": 0.6,
+     "peak_ram_mib": 73,
+     "peak_ram_mib_max": 122,
+     "gpu_util_mean": 13.6,
+     "gpu_encoder_util_mean": 19.7,
+     "gpu_mem_delta_mib": 1079,
+     "other_load_threads_avg": 0.6,
      "output": {
       "frames": 300,
       "duration_s": 10.0,
@@ -172,18 +173,18 @@
       "codec": "h264",
       "profile": "High",
       "pix_fmt": "yuv420p",
-      "size_bytes": 2724717,
-      "bitrate": 2179773,
+      "size_bytes": 1084482,
+      "bitrate": 867585,
       "color": [
-       null,
-       null,
-       null
+       "bt709",
+       "bt709",
+       "bt709"
       ]
      },
      "all_outputs_ok": true,
      "notes": {
-      "self_reported_s": 0.3,
-      "pipelines_cached": 53,
+      "self_reported_s": 0.22,
+      "pipelines_cached": 25,
       "pipelines_compiled": 0
      },
      "command": "ultrafast export title.json out/title/ultrafast-default.mp4 --crf 18",
@@ -826,27 +827,27 @@
     "default": {
      "warm_s": {
       "n": 5,
-      "median": 0.88,
-      "min": 0.875,
-      "max": 0.895,
-      "stdev": 0.008
+      "median": 0.718,
+      "min": 0.675,
+      "max": 0.755,
+      "stdev": 0.033
      },
      "warm_runs_s": [
-      0.8775,
-      0.8948,
-      0.8751,
-      0.8872,
-      0.8804
+      0.7177,
+      0.6753,
+      0.7551,
+      0.7459,
+      0.6961
      ],
-     "cold_s": 2.6251,
-     "cpu_threads_avg": 0.77,
-     "cpu_s": 0.68,
-     "peak_ram_mib": 124,
+     "cold_s": 2.0909,
+     "cpu_threads_avg": 0.96,
+     "cpu_s": 0.7,
+     "peak_ram_mib": 125,
      "peak_ram_mib_max": 125,
-     "gpu_util_mean": 10.2,
-     "gpu_encoder_util_mean": 8.7,
-     "gpu_mem_delta_mib": 1299,
-     "other_load_threads_avg": 0.13,
+     "gpu_util_mean": 16.4,
+     "gpu_encoder_util_mean": 20.0,
+     "gpu_mem_delta_mib": 1287,
+     "other_load_threads_avg": 0.77,
      "output": {
       "frames": 300,
       "duration_s": 10.0,
@@ -855,18 +856,18 @@
       "codec": "h264",
       "profile": "High",
       "pix_fmt": "yuv420p",
-      "size_bytes": 732642,
-      "bitrate": 586113,
+      "size_bytes": 353785,
+      "bitrate": 283028,
       "color": [
-       null,
-       null,
-       null
+       "bt709",
+       "bt709",
+       "bt709"
       ]
      },
      "all_outputs_ok": true,
      "notes": {
-      "self_reported_s": 0.31,
-      "pipelines_cached": 55,
+      "self_reported_s": 0.24,
+      "pipelines_cached": 27,
       "pipelines_compiled": 0
      },
      "command": "ultrafast export chart.json out/chart/ultrafast-default.mp4 --crf 18",
@@ -1509,27 +1510,27 @@
     "default": {
      "warm_s": {
       "n": 5,
-      "median": 0.985,
-      "min": 0.978,
-      "max": 1.007,
-      "stdev": 0.013
+      "median": 0.782,
+      "min": 0.748,
+      "max": 0.881,
+      "stdev": 0.052
      },
      "warm_runs_s": [
-      0.9948,
-      1.0072,
-      0.9778,
-      0.9846,
-      0.9778
+      0.7822,
+      0.8082,
+      0.748,
+      0.7619,
+      0.8808
      ],
-     "cold_s": 2.6187,
-     "cpu_threads_avg": 0.79,
-     "cpu_s": 0.79,
-     "peak_ram_mib": 129,
-     "peak_ram_mib_max": 135,
-     "gpu_util_mean": 7.7,
-     "gpu_encoder_util_mean": 7.8,
-     "gpu_mem_delta_mib": 1327,
-     "other_load_threads_avg": 0.15,
+     "cold_s": 1.9903,
+     "cpu_threads_avg": 0.99,
+     "cpu_s": 0.77,
+     "peak_ram_mib": 132,
+     "peak_ram_mib_max": 132,
+     "gpu_util_mean": 11.9,
+     "gpu_encoder_util_mean": 16.2,
+     "gpu_mem_delta_mib": 1316,
+     "other_load_threads_avg": 0.51,
      "output": {
       "frames": 300,
       "duration_s": 10.0,
@@ -1538,18 +1539,18 @@
       "codec": "h264",
       "profile": "High",
       "pix_fmt": "yuv420p",
-      "size_bytes": 9325863,
-      "bitrate": 7460690,
+      "size_bytes": 2925058,
+      "bitrate": 2340046,
       "color": [
-       null,
-       null,
-       null
+       "bt709",
+       "bt709",
+       "bt709"
       ]
      },
      "all_outputs_ok": true,
      "notes": {
-      "self_reported_s": 0.42,
-      "pipelines_cached": 54,
+      "self_reported_s": 0.35,
+      "pipelines_cached": 26,
       "pipelines_compiled": 0
      },
      "command": "ultrafast export footage.json out/footage/ultrafast-default.mp4 --crf 18",
@@ -2192,27 +2193,27 @@
     "default": {
      "warm_s": {
       "n": 5,
-      "median": 0.966,
-      "min": 0.964,
-      "max": 0.972,
-      "stdev": 0.003
+      "median": 0.739,
+      "min": 0.72,
+      "max": 0.792,
+      "stdev": 0.031
      },
      "warm_runs_s": [
-      0.9655,
-      0.9644,
-      0.9665,
-      0.9722,
-      0.9642
+      0.7916,
+      0.7774,
+      0.7392,
+      0.7285,
+      0.7201
      ],
-     "cold_s": 2.5446,
-     "cpu_threads_avg": 0.7,
-     "cpu_s": 0.68,
-     "peak_ram_mib": 121,
-     "peak_ram_mib_max": 122,
-     "gpu_util_mean": 16.1,
-     "gpu_encoder_util_mean": 9.6,
-     "gpu_mem_delta_mib": 1289,
-     "other_load_threads_avg": 0.15,
+     "cold_s": 2.0053,
+     "cpu_threads_avg": 0.88,
+     "cpu_s": 0.66,
+     "peak_ram_mib": 116,
+     "peak_ram_mib_max": 123,
+     "gpu_util_mean": 29.9,
+     "gpu_encoder_util_mean": 16.1,
+     "gpu_mem_delta_mib": 1279,
+     "other_load_threads_avg": 0.47,
      "output": {
       "frames": 300,
       "duration_s": 10.0,
@@ -2221,18 +2222,18 @@
       "codec": "h264",
       "profile": "High",
       "pix_fmt": "yuv420p",
-      "size_bytes": 9039636,
-      "bitrate": 7231708,
+      "size_bytes": 1590770,
+      "bitrate": 1272616,
       "color": [
-       null,
-       null,
-       null
+       "bt709",
+       "bt709",
+       "bt709"
       ]
      },
      "all_outputs_ok": true,
      "notes": {
-      "self_reported_s": 0.4,
-      "pipelines_cached": 54,
+      "self_reported_s": 0.3,
+      "pipelines_cached": 27,
       "pipelines_compiled": 0
      },
      "command": "ultrafast export effects.json out/effects/ultrafast-default.mp4 --crf 18",
@@ -2984,10 +2985,10 @@
   "title": {
    "ultrafast": {
     "n": 3,
-    "median": 0.345,
-    "min": 0.345,
-    "max": 0.35,
-    "stdev": 0.003
+    "median": 0.216,
+    "min": 0.215,
+    "max": 0.241,
+    "stdev": 0.015
    },
    "remotion": {
     "n": 3,
@@ -3007,10 +3008,10 @@
   "chart": {
    "ultrafast": {
     "n": 3,
-    "median": 0.348,
-    "min": 0.344,
-    "max": 0.354,
-    "stdev": 0.005
+    "median": 0.202,
+    "min": 0.2,
+    "max": 0.217,
+    "stdev": 0.009
    },
    "remotion": {
     "n": 3,
@@ -3030,10 +3031,10 @@
   "footage": {
    "ultrafast": {
     "n": 3,
-    "median": 0.818,
-    "min": 0.78,
-    "max": 0.831,
-    "stdev": 0.027
+    "median": 0.701,
+    "min": 0.666,
+    "max": 0.71,
+    "stdev": 0.023
    },
    "remotion": {
     "n": 3,
@@ -3053,10 +3054,10 @@
   "effects": {
    "ultrafast": {
     "n": 3,
-    "median": 0.586,
-    "min": 0.585,
-    "max": 0.599,
-    "stdev": 0.007
+    "median": 0.457,
+    "min": 0.443,
+    "max": 0.485,
+    "stdev": 0.021
    },
    "remotion": {
     "n": 3,
@@ -3077,74 +3078,74 @@
  "similarity_to_ultrafast": {
   "title": {
    "remotion": {
-    "ssim_all": 0.988863,
-    "psnr_avg_db": 29.891148
+    "ssim_all": 0.988582,
+    "psnr_avg_db": 29.891776
    },
    "hyperframes": {
-    "ssim_all": 0.984902,
-    "psnr_avg_db": 29.041511
+    "ssim_all": 0.984568,
+    "psnr_avg_db": 29.036108
    },
    "remotion fastest (bundled-vulkan-nvenc-c24)": {
-    "ssim_all": 0.989475,
-    "psnr_avg_db": 30.012407
+    "ssim_all": 0.989221,
+    "psnr_avg_db": 30.020229
    },
    "hyperframes fastest (w8)": {
-    "ssim_all": 0.984893,
-    "psnr_avg_db": 29.04143
+    "ssim_all": 0.984557,
+    "psnr_avg_db": 29.035992
    }
   },
   "chart": {
    "remotion": {
-    "ssim_all": 0.992791,
-    "psnr_avg_db": 34.59956
+    "ssim_all": 0.992708,
+    "psnr_avg_db": 34.561564
    },
    "hyperframes": {
-    "ssim_all": 0.991026,
-    "psnr_avg_db": 34.041912
+    "ssim_all": 0.990909,
+    "psnr_avg_db": 34.00418
    },
    "remotion fastest (bundled-angle-egl-c16)": {
-    "ssim_all": 0.992791,
-    "psnr_avg_db": 34.599453
+    "ssim_all": 0.992708,
+    "psnr_avg_db": 34.561437
    },
    "hyperframes fastest (w4)": {
-    "ssim_all": 0.991026,
-    "psnr_avg_db": 34.041912
+    "ssim_all": 0.990909,
+    "psnr_avg_db": 34.00418
    }
   },
   "footage": {
    "remotion": {
-    "ssim_all": 0.94862,
-    "psnr_avg_db": 27.541477
+    "ssim_all": 0.948133,
+    "psnr_avg_db": 27.540022
    },
    "hyperframes": {
-    "ssim_all": 0.936437,
-    "psnr_avg_db": 25.845303
+    "ssim_all": 0.936255,
+    "psnr_avg_db": 25.844675
    },
    "remotion fastest (bundled-vulkan-nvenc-c8)": {
-    "ssim_all": 0.948841,
-    "psnr_avg_db": 27.559349
+    "ssim_all": 0.94848,
+    "psnr_avg_db": 27.557839
    },
    "hyperframes fastest (w8)": {
-    "ssim_all": 0.936437,
-    "psnr_avg_db": 25.845303
+    "ssim_all": 0.936255,
+    "psnr_avg_db": 25.844675
    }
   },
   "effects": {
    "remotion": {
-    "ssim_all": 0.625479,
-    "psnr_avg_db": 25.235625
+    "ssim_all": 0.628114,
+    "psnr_avg_db": 25.246795
    },
    "hyperframes": {
-    "ssim_all": 0.625831,
-    "psnr_avg_db": 25.504757
+    "ssim_all": 0.628495,
+    "psnr_avg_db": 25.517248
    },
    "remotion fastest (bundled-vulkan-nvenc-c12)": {
-    "ssim_all": 0.639815,
-    "psnr_avg_db": 25.375617
+    "ssim_all": 0.642572,
+    "psnr_avg_db": 25.38812
    },
    "hyperframes fastest (w12)": {
-    "ssim_all": 0.625821,
-    "psnr_avg_db": 25.504631
+    "ssim_all": 0.628481,
+    "psnr_avg_db": 25.517112
    }
   }
  },
@@ -14999,618 +15000,6 @@
   {
    "phase": "measure",
    "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "cold",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:13",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 2.4893,
-   "cpu_s": 5.258,
-   "avg_cpu_threads": 2.11,
-   "peak_ram_mib": 1635.0,
-   "cgroup_memory_peak_mib": 1705.3,
-   "gpu": {
-    "util_mean": 3.0,
-    "util_max": 20.0,
-    "encoder_util_mean": 4.3,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 25
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "claude",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.2,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     7.02,
-     5.4,
-     4.18
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-cold1-27bf075c0b.log",
-   "notes": {
-    "self_reported_s": 0.46,
-    "pipelines_cached": 0,
-    "pipelines_compiled": 53
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:20",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8534,
-   "cpu_s": 0.621,
-   "avg_cpu_threads": 0.73,
-   "peak_ram_mib": 84.8,
-   "cgroup_memory_peak_mib": 135.6,
-   "gpu": {
-    "util_mean": 6.9,
-    "util_max": 18.0,
-    "encoder_util_mean": 6.7,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.11,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "kded6",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.15,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.26,
-    "loadavg_before": [
-     6.02,
-     5.24,
-     4.14
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.07
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm1-add1817d52.log",
-   "notes": {
-    "self_reported_s": 0.3,
-    "pipelines_cached": 53,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:27",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8511,
-   "cpu_s": 0.622,
-   "avg_cpu_threads": 0.73,
-   "peak_ram_mib": 84.9,
-   "cgroup_memory_peak_mib": 135.8,
-   "gpu": {
-    "util_mean": 7.7,
-    "util_max": 20.0,
-    "encoder_util_mean": 8.2,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "systemd",
-     "threads": 0.01
-    },
-    {
-     "name": "qs",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.16,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     5.62,
-     5.17,
-     4.13
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.03
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm2-f89738c319.log",
-   "notes": {
-    "self_reported_s": 0.3,
-    "pipelines_cached": 53,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:33",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8497,
-   "cpu_s": 0.615,
-   "avg_cpu_threads": 0.72,
-   "peak_ram_mib": 85.3,
-   "cgroup_memory_peak_mib": 136.5,
-   "gpu": {
-    "util_mean": 6.7,
-    "util_max": 20.0,
-    "encoder_util_mean": 7.3,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.11,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.04
-    },
-    {
-     "name": "systemd",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.14,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.22,
-    "loadavg_before": [
-     4.75,
-     5.0,
-     4.08
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "claude",
-      "threads": 0.04
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm3-4f39f3fd7c.log",
-   "notes": {
-    "self_reported_s": 0.3,
-    "pipelines_cached": 53,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 4,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:40",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8409,
-   "cpu_s": 0.609,
-   "avg_cpu_threads": 0.72,
-   "peak_ram_mib": 85.1,
-   "cgroup_memory_peak_mib": 135.7,
-   "gpu": {
-    "util_mean": 8.9,
-    "util_max": 19.0,
-    "encoder_util_mean": 11.3,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.17,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.08
-    },
-    {
-     "name": "qs",
-     "threads": 0.04
-    },
-    {
-     "name": "sidra",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.3,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     4.45,
-     4.93,
-     4.06
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm4-f25db716a3.log",
-   "notes": {
-    "self_reported_s": 0.3,
-    "pipelines_cached": 53,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 5,
-   "attempt": 1,
-   "time": "2026-11-22T06:04:47",
-   "argv": [
-    "ultrafast",
-    "export",
-    "title.json",
-    "out/title/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8628,
-   "cpu_s": 0.632,
-   "avg_cpu_threads": 0.73,
-   "peak_ram_mib": 120.8,
-   "cgroup_memory_peak_mib": 136.3,
-   "gpu": {
-    "util_mean": 7.2,
-    "util_max": 21.0,
-    "encoder_util_mean": 11.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1091.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "claude",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "python3",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     4.09,
-     4.85,
-     4.04
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm5-437aa1cd02.log",
-   "notes": {
-    "self_reported_s": 0.3,
-    "pipelines_cached": 53,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 2724717,
-    "bitrate": 2179773,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "title",
    "tool": "remotion",
    "config": "default",
    "kind": "cold",
@@ -21968,618 +21357,6 @@
    "notes": {},
    "output": {
     "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "cold",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:15:27",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 2.6251,
-   "cpu_s": 6.12,
-   "avg_cpu_threads": 2.33,
-   "peak_ram_mib": 1685.1,
-   "cgroup_memory_peak_mib": 1718.2,
-   "gpu": {
-    "util_mean": 4.8,
-    "util_max": 29.0,
-    "encoder_util_mean": 3.8,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 26
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "claude",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     3.65,
-     3.49,
-     3.46
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-cold1-b16cceb158.log",
-   "notes": {
-    "self_reported_s": 0.64,
-    "pipelines_cached": 0,
-    "pipelines_compiled": 55
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:15:34",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8775,
-   "cpu_s": 0.667,
-   "avg_cpu_threads": 0.76,
-   "peak_ram_mib": 123.8,
-   "cgroup_memory_peak_mib": 138.9,
-   "gpu": {
-    "util_mean": 10.2,
-    "util_max": 32.0,
-    "encoder_util_mean": 8.7,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.1,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "zen",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.15,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.23,
-    "loadavg_before": [
-     3.08,
-     3.38,
-     3.42
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "claude",
-      "threads": 0.03
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm1-5894180106.log",
-   "notes": {
-    "self_reported_s": 0.31,
-    "pipelines_cached": 55,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:15:40",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8948,
-   "cpu_s": 0.685,
-   "avg_cpu_threads": 0.77,
-   "peak_ram_mib": 123.4,
-   "cgroup_memory_peak_mib": 138.3,
-   "gpu": {
-    "util_mean": 6.0,
-    "util_max": 21.0,
-    "encoder_util_mean": 4.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.07
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "python3",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.18,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.25,
-    "loadavg_before": [
-     2.84,
-     3.32,
-     3.4
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "claude",
-      "threads": 0.04
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm2-2446599bfc.log",
-   "notes": {
-    "self_reported_s": 0.31,
-    "pipelines_cached": 55,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:15:47",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8751,
-   "cpu_s": 0.679,
-   "avg_cpu_threads": 0.78,
-   "peak_ram_mib": 124.6,
-   "cgroup_memory_peak_mib": 139.9,
-   "gpu": {
-    "util_mean": 11.0,
-    "util_max": 33.0,
-    "encoder_util_mean": 9.7,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.16,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "claude",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.17,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     2.61,
-     3.27,
-     3.38
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm3-b9979c3a4c.log",
-   "notes": {
-    "self_reported_s": 0.31,
-    "pipelines_cached": 55,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 4,
-   "attempt": 1,
-   "time": "2026-11-22T06:15:53",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8872,
-   "cpu_s": 0.67,
-   "avg_cpu_threads": 0.75,
-   "peak_ram_mib": 123.6,
-   "cgroup_memory_peak_mib": 139.2,
-   "gpu": {
-    "util_mean": 9.2,
-    "util_max": 35.0,
-    "encoder_util_mean": 7.6,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.16,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "qs",
-     "threads": 0.05
-    },
-    {
-     "name": "systemd",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.18,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.29,
-    "loadavg_before": [
-     2.36,
-     3.19,
-     3.36
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.07
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "claude",
-      "threads": 0.04
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm4-ccbaaa1edf.log",
-   "notes": {
-    "self_reported_s": 0.31,
-    "pipelines_cached": 55,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 5,
-   "attempt": 1,
-   "time": "2026-11-22T06:16:00",
-   "argv": [
-    "ultrafast",
-    "export",
-    "chart.json",
-    "out/chart/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8804,
-   "cpu_s": 0.676,
-   "avg_cpu_threads": 0.77,
-   "peak_ram_mib": 123.7,
-   "cgroup_memory_peak_mib": 139.1,
-   "gpu": {
-    "util_mean": 10.6,
-    "util_max": 32.0,
-    "encoder_util_mean": 8.9,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1299.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.07
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "systemd",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.16,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     2.17,
-     3.14,
-     3.34
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm5-d8e24d6243.log",
-   "notes": {
-    "self_reported_s": 0.31,
-    "pipelines_cached": 55,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 732642,
-    "bitrate": 586113,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
    },
    "ok": true,
    "contaminated": false
@@ -28951,618 +27728,6 @@
   {
    "phase": "measure",
    "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "cold",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:18",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 2.6187,
-   "cpu_s": 5.645,
-   "avg_cpu_threads": 2.16,
-   "peak_ram_mib": 1654.1,
-   "cgroup_memory_peak_mib": 1682.1,
-   "gpu": {
-    "util_mean": 2.6,
-    "util_max": 26.0,
-    "encoder_util_mean": 2.8,
-    "decoder_util_mean": 1.8,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 26
-   },
-   "foreign_cpu_threads": 0.22,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.07
-    },
-    {
-     "name": "claude",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.04
-    }
-   ],
-   "host_other_cpu_threads": 0.28,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.25,
-    "loadavg_before": [
-     0.9,
-     2.1,
-     2.78
-    ],
-    "top_processes_before": [
-     {
-      "name": "claude",
-      "threads": 0.07
-     },
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-cold1-1bb235260b.log",
-   "notes": {
-    "self_reported_s": 0.61,
-    "pipelines_cached": 0,
-    "pipelines_compiled": 54
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:25",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9948,
-   "cpu_s": 0.786,
-   "avg_cpu_threads": 0.79,
-   "peak_ram_mib": 128.7,
-   "cgroup_memory_peak_mib": 151.4,
-   "gpu": {
-    "util_mean": 8.8,
-    "util_max": 26.0,
-    "encoder_util_mean": 7.8,
-    "decoder_util_mean": 5.2,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.17,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "claude",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     0.84,
-     2.05,
-     2.76
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "python3",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm1-3f28b31826.log",
-   "notes": {
-    "self_reported_s": 0.42,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:33",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 1.0072,
-   "cpu_s": 0.799,
-   "avg_cpu_threads": 0.79,
-   "peak_ram_mib": 135.1,
-   "cgroup_memory_peak_mib": 151.2,
-   "gpu": {
-    "util_mean": 7.7,
-    "util_max": 25.0,
-    "encoder_util_mean": 8.0,
-    "decoder_util_mean": 5.4,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.15,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "claude",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     0.79,
-     2.0,
-     2.73
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.07
-     },
-     {
-      "name": "claude",
-      "threads": 0.04
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm2-a7af51574c.log",
-   "notes": {
-    "self_reported_s": 0.42,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:40",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9778,
-   "cpu_s": 0.77,
-   "avg_cpu_threads": 0.79,
-   "peak_ram_mib": 128.7,
-   "cgroup_memory_peak_mib": 151.4,
-   "gpu": {
-    "util_mean": 8.4,
-    "util_max": 23.0,
-    "encoder_util_mean": 11.0,
-    "decoder_util_mean": 6.2,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.14,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.07
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "zen",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.18,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     0.72,
-     1.96,
-     2.72
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm3-63cbf9ad45.log",
-   "notes": {
-    "self_reported_s": 0.42,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 4,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:48",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9846,
-   "cpu_s": 0.791,
-   "avg_cpu_threads": 0.8,
-   "peak_ram_mib": 135.3,
-   "cgroup_memory_peak_mib": 151.4,
-   "gpu": {
-    "util_mean": 6.5,
-    "util_max": 25.0,
-    "encoder_util_mean": 7.2,
-    "decoder_util_mean": 4.7,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "zen",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.17,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     0.84,
-     1.95,
-     2.71
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm4-73ddd2b4f8.log",
-   "notes": {
-    "self_reported_s": 0.42,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 5,
-   "attempt": 1,
-   "time": "2026-11-22T06:26:55",
-   "argv": [
-    "ultrafast",
-    "export",
-    "footage.json",
-    "out/footage/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9778,
-   "cpu_s": 0.785,
-   "avg_cpu_threads": 0.8,
-   "peak_ram_mib": 128.9,
-   "cgroup_memory_peak_mib": 151.1,
-   "gpu": {
-    "util_mean": 3.9,
-    "util_max": 12.0,
-    "encoder_util_mean": 5.0,
-    "decoder_util_mean": 3.1,
-    "mem_used_peak_delta_mib": 1327.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.17,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "claude",
-     "threads": 0.04
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.18,
-    "loadavg_before": [
-     0.85,
-     1.93,
-     2.7
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm5-bcb252feaa.log",
-   "notes": {
-    "self_reported_s": 0.42,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1080,
-    "height": 1920,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9325863,
-    "bitrate": 7460690,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "footage",
    "tool": "remotion",
    "config": "default",
    "kind": "cold",
@@ -35927,618 +34092,6 @@
   {
    "phase": "measure",
    "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "cold",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:41:51",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 2.5446,
-   "cpu_s": 5.484,
-   "avg_cpu_threads": 2.16,
-   "peak_ram_mib": 1634.5,
-   "cgroup_memory_peak_mib": 1663.8,
-   "gpu": {
-    "util_mean": 8.7,
-    "util_max": 73.0,
-    "encoder_util_mean": 3.1,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 26
-   },
-   "foreign_cpu_threads": 0.19,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.04
-    },
-    {
-     "name": "claude",
-     "threads": 0.04
-    }
-   ],
-   "host_other_cpu_threads": 0.23,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.33,
-    "loadavg_before": [
-     2.89,
-     3.68,
-     3.61
-    ],
-    "top_processes_before": [
-     {
-      "name": "claude",
-      "threads": 0.14
-     },
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-cold1-0c65778050.log",
-   "notes": {
-    "self_reported_s": 0.56,
-    "pipelines_cached": 0,
-    "pipelines_compiled": 54
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:41:59",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9655,
-   "cpu_s": 0.679,
-   "avg_cpu_threads": 0.7,
-   "peak_ram_mib": 121.7,
-   "cgroup_memory_peak_mib": 138.1,
-   "gpu": {
-    "util_mean": 16.1,
-    "util_max": 47.0,
-    "encoder_util_mean": 9.3,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.2,
-   "foreign_top_processes": [
-    {
-     "name": "claude",
-     "threads": 0.06
-    },
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.25,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.16,
-    "loadavg_before": [
-     2.96,
-     3.67,
-     3.61
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.05
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm1-628b463d6d.log",
-   "notes": {
-    "self_reported_s": 0.4,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:42:06",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9644,
-   "cpu_s": 0.672,
-   "avg_cpu_threads": 0.7,
-   "peak_ram_mib": 121.2,
-   "cgroup_memory_peak_mib": 137.3,
-   "gpu": {
-    "util_mean": 20.6,
-    "util_max": 55.0,
-    "encoder_util_mean": 11.5,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.1,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.04
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "systemd",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.15,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     2.8,
-     3.63,
-     3.59
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm2-29c0f962f3.log",
-   "notes": {
-    "self_reported_s": 0.4,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:42:14",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9665,
-   "cpu_s": 0.672,
-   "avg_cpu_threads": 0.7,
-   "peak_ram_mib": 121.6,
-   "cgroup_memory_peak_mib": 138.1,
-   "gpu": {
-    "util_mean": 26.2,
-    "util_max": 61.0,
-    "encoder_util_mean": 9.6,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.09,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "kded6",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.13,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     2.37,
-     3.51,
-     3.55
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm3-93961935a2.log",
-   "notes": {
-    "self_reported_s": 0.4,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 4,
-   "attempt": 1,
-   "time": "2026-11-22T06:42:21",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9722,
-   "cpu_s": 0.681,
-   "avg_cpu_threads": 0.7,
-   "peak_ram_mib": 121.3,
-   "cgroup_memory_peak_mib": 137.6,
-   "gpu": {
-    "util_mean": 13.5,
-    "util_max": 36.0,
-    "encoder_util_mean": 10.9,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.04
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "python3",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.13,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     2.26,
-     3.47,
-     3.54
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm4-5c15992719.log",
-   "notes": {
-    "self_reported_s": 0.4,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 5,
-   "attempt": 1,
-   "time": "2026-11-22T06:42:29",
-   "argv": [
-    "ultrafast",
-    "export",
-    "effects.json",
-    "out/effects/ultrafast-default.mp4",
-    "--crf",
-    "18"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9642,
-   "cpu_s": 0.676,
-   "avg_cpu_threads": 0.7,
-   "peak_ram_mib": 121.3,
-   "cgroup_memory_peak_mib": 138.3,
-   "gpu": {
-    "util_mean": 15.1,
-    "util_max": 73.0,
-    "encoder_util_mean": 5.2,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1289.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.21,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.04
-    },
-    {
-     "name": "claude",
-     "threads": 0.04
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.2,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.18,
-    "loadavg_before": [
-     1.91,
-     3.35,
-     3.5
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm5-707f097bb8.log",
-   "notes": {
-    "self_reported_s": 0.4,
-    "pipelines_cached": 54,
-    "pipelines_compiled": 0
-   },
-   "output": {
-    "codec": "h264",
-    "profile": "High",
-    "width": 1920,
-    "height": 1080,
-    "pix_fmt": "yuv420p",
-    "fps": "30/1",
-    "frames": 300,
-    "duration_s": 10.0,
-    "size_bytes": 9039636,
-    "bitrate": 7231708,
-    "color": [
-     null,
-     null,
-     null
-    ],
-    "ok": true,
-    "problems": []
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "measure",
-   "comp": "effects",
    "tool": "remotion",
    "config": "default",
    "kind": "cold",
@@ -42851,338 +40404,6 @@
   {
    "phase": "preview",
    "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warmup",
-   "index": 0,
-   "attempt": 1,
-   "time": "2026-11-22T06:56:54",
-   "argv": [
-    "ultrafast",
-    "render",
-    "title.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/title/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.6334,
-   "cpu_s": 0.641,
-   "avg_cpu_threads": 1.01,
-   "peak_ram_mib": 248.5,
-   "cgroup_memory_peak_mib": 260.4,
-   "gpu": {
-    "util_mean": 1.4,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 515.0,
-    "samples": 7
-   },
-   "foreign_cpu_threads": 0.06,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "obexd",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.19,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     8.81,
-     6.47,
-     5.58
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warmup0-f2f3a79e8a.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:57:00",
-   "argv": [
-    "ultrafast",
-    "render",
-    "title.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/title/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3499,
-   "cpu_s": 0.351,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 35.6,
-   "cgroup_memory_peak_mib": 54.7,
-   "gpu": {
-    "util_mean": 5.2,
-    "util_max": 7.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 515.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.17,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.09
-    },
-    {
-     "name": "qs",
-     "threads": 0.06
-    },
-    {
-     "name": "zen",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.2,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.18,
-    "loadavg_before": [
-     8.26,
-     6.4,
-     5.56
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm1-f592ad2889.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:57:06",
-   "argv": [
-    "ultrafast",
-    "render",
-    "title.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/title/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3449,
-   "cpu_s": 0.346,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 35.6,
-   "cgroup_memory_peak_mib": 54.7,
-   "gpu": {
-    "util_mean": 1.2,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 515.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.26,
-   "foreign_top_processes": [
-    {
-     "name": "claude",
-     "threads": 0.12
-    },
-    {
-     "name": "claude",
-     "threads": 0.09
-    },
-    {
-     "name": "systemd",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.24,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     7.68,
-     6.31,
-     5.53
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm2-dfd4f34c26.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "title",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:57:11",
-   "argv": [
-    "ultrafast",
-    "render",
-    "title.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/title/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3446,
-   "cpu_s": 0.345,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 35.8,
-   "cgroup_memory_peak_mib": 54.1,
-   "gpu": {
-    "util_mean": 0.0,
-    "util_max": 0.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 515.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.15,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "systemd",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.16,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.18,
-    "loadavg_before": [
-     7.07,
-     6.2,
-     5.5
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/title-ultrafast-default-warm3-84f070d6d0.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "title",
    "tool": "remotion",
    "config": "default",
    "kind": "warmup",
@@ -43841,338 +41062,6 @@
    "foreign_renderers_during": [],
    "leftover_processes": [],
    "log": "logs/title-hyperframes-default-warm3-0a92390096.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warmup",
-   "index": 0,
-   "attempt": 1,
-   "time": "2026-11-22T06:58:15",
-   "argv": [
-    "ultrafast",
-    "render",
-    "chart.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/chart/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9995,
-   "cpu_s": 1.684,
-   "avg_cpu_threads": 1.68,
-   "peak_ram_mib": 675.3,
-   "cgroup_memory_peak_mib": 689.6,
-   "gpu": {
-    "util_mean": 0.0,
-    "util_max": 0.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 733.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "kwin_wayland",
-     "threads": 0.01
-    }
-   ],
-   "host_other_cpu_threads": 0.15,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     3.09,
-     5.19,
-     5.19
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.07
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warmup0-68e0deb2ea.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:58:20",
-   "argv": [
-    "ultrafast",
-    "render",
-    "chart.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/chart/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3481,
-   "cpu_s": 0.351,
-   "avg_cpu_threads": 1.01,
-   "peak_ram_mib": 39.1,
-   "cgroup_memory_peak_mib": 58.1,
-   "gpu": {
-    "util_mean": 2.0,
-    "util_max": 4.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 734.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.2,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.09
-    },
-    {
-     "name": "systemd",
-     "threads": 0.03
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.14,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     2.93,
-     5.12,
-     5.17
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm1-a55153f35b.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:58:26",
-   "argv": [
-    "ultrafast",
-    "render",
-    "chart.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/chart/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3436,
-   "cpu_s": 0.345,
-   "avg_cpu_threads": 1.01,
-   "peak_ram_mib": 39.1,
-   "cgroup_memory_peak_mib": 57.8,
-   "gpu": {
-    "util_mean": 1.2,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 734.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "polkitd",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.13,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     2.69,
-     5.03,
-     5.14
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm2-dcf95d96e7.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "chart",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:58:31",
-   "argv": [
-    "ultrafast",
-    "render",
-    "chart.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/chart/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.3539,
-   "cpu_s": 0.358,
-   "avg_cpu_threads": 1.01,
-   "peak_ram_mib": 39.3,
-   "cgroup_memory_peak_mib": 58.3,
-   "gpu": {
-    "util_mean": 2.0,
-    "util_max": 4.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 734.0,
-    "samples": 4
-   },
-   "foreign_cpu_threads": 0.14,
-   "foreign_top_processes": [
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "python3",
-     "threads": 0.03
-    },
-    {
-     "name": "claude",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.12,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.19,
-    "loadavg_before": [
-     2.48,
-     4.95,
-     5.12
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/chart-ultrafast-default-warm3-ff60b0e34b.log",
    "notes": {},
    "output": {
     "exists": true
@@ -44851,338 +41740,6 @@
   {
    "phase": "preview",
    "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warmup",
-   "index": 0,
-   "attempt": 1,
-   "time": "2026-11-22T06:59:35",
-   "argv": [
-    "ultrafast",
-    "render",
-    "footage.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/footage/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.9651,
-   "cpu_s": 1.464,
-   "avg_cpu_threads": 1.52,
-   "peak_ram_mib": 483.7,
-   "cgroup_memory_peak_mib": 501.1,
-   "gpu": {
-    "util_mean": 1.0,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 1172.0,
-    "samples": 10
-   },
-   "foreign_cpu_threads": 0.13,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.04
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "claude",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.16,
-   "quiet_before": {
-    "waited_s": 4.8,
-    "busy_threads_before": 0.21,
-    "loadavg_before": [
-     1.28,
-     4.1,
-     4.81
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.04
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warmup0-9899a906f5.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T06:59:41",
-   "argv": [
-    "ultrafast",
-    "render",
-    "footage.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/footage/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8183,
-   "cpu_s": 0.698,
-   "avg_cpu_threads": 0.85,
-   "peak_ram_mib": 88.7,
-   "cgroup_memory_peak_mib": 100.3,
-   "gpu": {
-    "util_mean": 2.2,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 2.2,
-    "mem_used_peak_delta_mib": 1168.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.35,
-   "foreign_top_processes": [
-    {
-     "name": "redis-server",
-     "threads": 0.22
-    },
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "python",
-     "threads": 0.04
-    }
-   ],
-   "host_other_cpu_threads": 0.38,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     1.18,
-     4.03,
-     4.78
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "claude",
-      "threads": 0.03
-     },
-     {
-      "name": "qs",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm1-d1db9e2d76.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T06:59:47",
-   "argv": [
-    "ultrafast",
-    "render",
-    "footage.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/footage/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.8314,
-   "cpu_s": 0.735,
-   "avg_cpu_threads": 0.88,
-   "peak_ram_mib": 79.6,
-   "cgroup_memory_peak_mib": 100.3,
-   "gpu": {
-    "util_mean": 0.4,
-    "util_max": 2.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 6.7,
-    "mem_used_peak_delta_mib": 1134.0,
-    "samples": 9
-   },
-   "foreign_cpu_threads": 0.19,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.06
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    },
-    {
-     "name": "claude",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.21,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.86,
-    "loadavg_before": [
-     1.09,
-     3.97,
-     4.76
-    ],
-    "top_processes_before": [
-     {
-      "name": "redis-server",
-      "threads": 0.35
-     },
-     {
-      "name": "python",
-      "threads": 0.31
-     },
-     {
-      "name": "python3",
-      "threads": 0.05
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm2-f3960b0a90.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "footage",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T06:59:53",
-   "argv": [
-    "ultrafast",
-    "render",
-    "footage.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/footage/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.7802,
-   "cpu_s": 0.692,
-   "avg_cpu_threads": 0.89,
-   "peak_ram_mib": 88.5,
-   "cgroup_memory_peak_mib": 100.6,
-   "gpu": {
-    "util_mean": 2.8,
-    "util_max": 6.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 6.8,
-    "mem_used_peak_delta_mib": 1172.0,
-    "samples": 8
-   },
-   "foreign_cpu_threads": 0.23,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.08
-    },
-    {
-     "name": "qs",
-     "threads": 0.04
-    },
-    {
-     "name": "Isolated Web Co",
-     "threads": 0.04
-    }
-   ],
-   "host_other_cpu_threads": 0.25,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.22,
-    "loadavg_before": [
-     0.99,
-     3.85,
-     4.71
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.02
-     },
-     {
-      "name": "systemd",
-      "threads": 0.02
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/footage-ultrafast-default-warm3-da5a396b37.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "footage",
    "tool": "remotion",
    "config": "default",
    "kind": "warmup",
@@ -45841,334 +42398,6 @@
    "foreign_renderers_during": [],
    "leftover_processes": [],
    "log": "logs/footage-hyperframes-default-warm3-d6c703edff.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warmup",
-   "index": 0,
-   "attempt": 1,
-   "time": "2026-11-22T07:00:58",
-   "argv": [
-    "ultrafast",
-    "render",
-    "effects.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/effects/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.5879,
-   "cpu_s": 0.589,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 43.9,
-   "cgroup_memory_peak_mib": 57.6,
-   "gpu": {
-    "util_mean": 3.0,
-    "util_max": 6.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 619.0,
-    "samples": 6
-   },
-   "foreign_cpu_threads": 0.14,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "systemd",
-     "threads": 0.02
-    },
-    {
-     "name": "qs",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.14,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     0.86,
-     3.26,
-     4.45
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.05
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warmup0-cc2b349454.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 1,
-   "attempt": 1,
-   "time": "2026-11-22T07:01:04",
-   "argv": [
-    "ultrafast",
-    "render",
-    "effects.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/effects/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.5854,
-   "cpu_s": 0.586,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 44.9,
-   "cgroup_memory_peak_mib": 57.0,
-   "gpu": {
-    "util_mean": 2.0,
-    "util_max": 4.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 619.0,
-    "samples": 6
-   },
-   "foreign_cpu_threads": 0.09,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.14,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     0.79,
-     3.21,
-     4.42
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.07
-     },
-     {
-      "name": "qs",
-      "threads": 0.02
-     },
-     {
-      "name": "zen",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm1-f5c3e5b195.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 2,
-   "attempt": 1,
-   "time": "2026-11-22T07:01:10",
-   "argv": [
-    "ultrafast",
-    "render",
-    "effects.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/effects/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.5863,
-   "cpu_s": 0.587,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 43.8,
-   "cgroup_memory_peak_mib": 59.6,
-   "gpu": {
-    "util_mean": 2.5,
-    "util_max": 5.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 619.0,
-    "samples": 6
-   },
-   "foreign_cpu_threads": 0.12,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.07
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "systemd",
-     "threads": 0.02
-    }
-   ],
-   "host_other_cpu_threads": 0.16,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.2,
-    "loadavg_before": [
-     0.73,
-     3.15,
-     4.4
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm2-69ce6f4b0e.log",
-   "notes": {},
-   "output": {
-    "exists": true
-   },
-   "ok": true,
-   "contaminated": false
-  },
-  {
-   "phase": "preview",
-   "comp": "effects",
-   "tool": "ultrafast",
-   "config": "default",
-   "kind": "warm",
-   "index": 3,
-   "attempt": 1,
-   "time": "2026-11-22T07:01:16",
-   "argv": [
-    "ultrafast",
-    "render",
-    "effects.json",
-    "--at",
-    "5.0",
-    "--out",
-    "out/effects/ultrafast-preview.png"
-   ],
-   "cwd": "ultrafast",
-   "returncode": 0,
-   "wall_s": 0.5987,
-   "cpu_s": 0.6,
-   "avg_cpu_threads": 1.0,
-   "peak_ram_mib": 43.8,
-   "cgroup_memory_peak_mib": 57.1,
-   "gpu": {
-    "util_mean": 3.5,
-    "util_max": 7.0,
-    "encoder_util_mean": 0.0,
-    "decoder_util_mean": 0.0,
-    "mem_used_peak_delta_mib": 619.0,
-    "samples": 6
-   },
-   "foreign_cpu_threads": 0.18,
-   "foreign_top_processes": [
-    {
-     "name": "python3",
-     "threads": 0.05
-    },
-    {
-     "name": "qs",
-     "threads": 0.03
-    },
-    {
-     "name": "claude",
-     "threads": 0.03
-    }
-   ],
-   "host_other_cpu_threads": 0.2,
-   "quiet_before": {
-    "waited_s": 4.7,
-    "busy_threads_before": 0.17,
-    "loadavg_before": [
-     0.75,
-     3.12,
-     4.38
-    ],
-    "top_processes_before": [
-     {
-      "name": "python3",
-      "threads": 0.06
-     },
-     {
-      "name": "qs",
-      "threads": 0.03
-     },
-     {
-      "name": "claude",
-      "threads": 0.01
-     }
-    ],
-    "gpu_util_before": 0.0
-   },
-   "foreign_renderers_during": [],
-   "leftover_processes": [],
-   "log": "logs/effects-ultrafast-default-warm3-d3092903e9.log",
    "notes": {},
    "output": {
     "exists": true
@@ -60329,6 +56558,4192 @@
      null,
      null,
      null
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:47:49",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 1.7843,
+   "cpu_s": 1.715,
+   "avg_cpu_threads": 0.96,
+   "peak_ram_mib": 466.1,
+   "cgroup_memory_peak_mib": 541.0,
+   "gpu": {
+    "util_mean": 8.3,
+    "util_max": 34.0,
+    "encoder_util_mean": 9.4,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1087.0,
+    "samples": 18
+   },
+   "foreign_cpu_threads": 1.81,
+   "foreign_top_processes": [
+    {
+     "name": "python",
+     "threads": 0.58
+    },
+    {
+     "name": "redis-server",
+     "threads": 0.41
+    },
+    {
+     "name": "RDD Process",
+     "threads": 0.33
+    }
+   ],
+   "host_other_cpu_threads": 1.8,
+   "quiet_before": {
+    "waited_s": 4337.6,
+    "busy_threads_before": 0.89,
+    "loadavg_before": [
+     0.93,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.44
+     },
+     {
+      "name": "zen",
+      "threads": 0.14
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     }
+    ],
+    "gpu_util_before": 4.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-cold1-d210cc9293.log",
+   "notes": {
+    "self_reported_s": 0.53,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 25
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": true
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 2,
+   "time": "2026-11-23T22:47:56",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7204,
+   "cpu_s": 0.668,
+   "avg_cpu_threads": 0.93,
+   "peak_ram_mib": 122.0,
+   "cgroup_memory_peak_mib": 138.4,
+   "gpu": {
+    "util_mean": 12.3,
+    "util_max": 21.0,
+    "encoder_util_mean": 8.6,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1169.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 1.89,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.94
+    },
+    {
+     "name": "zen",
+     "threads": 0.35
+    },
+    {
+     "name": "RDD Process",
+     "threads": 0.25
+    }
+   ],
+   "host_other_cpu_threads": 1.86,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.88,
+    "loadavg_before": [
+     0.87,
+     0.74,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.35
+     },
+     {
+      "name": "python",
+      "threads": 0.15
+     },
+     {
+      "name": "zen",
+      "threads": 0.08
+     }
+    ],
+    "gpu_util_before": 5.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-cold1-881c9e5eeb.log",
+   "notes": {
+    "self_reported_s": 0.23,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": true,
+   "invalid": "not a cold run: it repeated a discarded cold run without clearing the caches that run had filled (bench.py now clears them before every cold attempt); title's cold run was measured again"
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 3,
+   "time": "2026-11-23T22:48:02",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6551,
+   "cpu_s": 0.615,
+   "avg_cpu_threads": 0.94,
+   "peak_ram_mib": 79.4,
+   "cgroup_memory_peak_mib": 138.1,
+   "gpu": {
+    "util_mean": 11.2,
+    "util_max": 19.0,
+    "encoder_util_mean": 21.5,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 6
+   },
+   "foreign_cpu_threads": 0.69,
+   "foreign_top_processes": [
+    {
+     "name": "RDD Process",
+     "threads": 0.35
+    },
+    {
+     "name": "zen",
+     "threads": 0.05
+    },
+    {
+     "name": "qs",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.68,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.96,
+    "loadavg_before": [
+     0.88,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.35
+     },
+     {
+      "name": "zen",
+      "threads": 0.17
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.15
+     }
+    ],
+    "gpu_util_before": 4.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-cold1-75ee3b9873.log",
+   "notes": {
+    "self_reported_s": 0.23,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false,
+   "invalid": "not a cold run: it repeated a discarded cold run without clearing the caches that run had filled (bench.py now clears them before every cold attempt); title's cold run was measured again"
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:09",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6598,
+   "cpu_s": 0.6,
+   "avg_cpu_threads": 0.91,
+   "peak_ram_mib": 121.8,
+   "cgroup_memory_peak_mib": 138.8,
+   "gpu": {
+    "util_mean": 6.0,
+    "util_max": 14.0,
+    "encoder_util_mean": 8.3,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 6
+   },
+   "foreign_cpu_threads": 0.77,
+   "foreign_top_processes": [
+    {
+     "name": "RDD Process",
+     "threads": 0.26
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.2
+    },
+    {
+     "name": "python3",
+     "threads": 0.08
+    }
+   ],
+   "host_other_cpu_threads": 0.8,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.72,
+    "loadavg_before": [
+     0.9,
+     0.76,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.31
+     },
+     {
+      "name": "zen",
+      "threads": 0.08
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.07
+     }
+    ],
+    "gpu_util_before": 2.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm1-658b8f8f55.log",
+   "notes": {
+    "self_reported_s": 0.22,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:16",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7126,
+   "cpu_s": 0.672,
+   "avg_cpu_threads": 0.94,
+   "peak_ram_mib": 79.4,
+   "cgroup_memory_peak_mib": 138.1,
+   "gpu": {
+    "util_mean": 13.6,
+    "util_max": 33.0,
+    "encoder_util_mean": 19.7,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.49,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.13
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.11
+    },
+    {
+     "name": "python3",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.56,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.36,
+    "loadavg_before": [
+     0.82,
+     0.74,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.05
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 1.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm2-0183a8b021.log",
+   "notes": {
+    "self_reported_s": 0.22,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:22",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6538,
+   "cpu_s": 0.605,
+   "avg_cpu_threads": 0.93,
+   "peak_ram_mib": 72.6,
+   "cgroup_memory_peak_mib": 139.5,
+   "gpu": {
+    "util_mean": 17.3,
+    "util_max": 33.0,
+    "encoder_util_mean": 39.9,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.92,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.41
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.17
+    },
+    {
+     "name": "python3",
+     "threads": 0.08
+    }
+   ],
+   "host_other_cpu_threads": 0.91,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.37,
+    "loadavg_before": [
+     0.84,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "zen",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 2.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm3-67dfb34349.log",
+   "notes": {
+    "self_reported_s": 0.22,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 4,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:29",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6563,
+   "cpu_s": 0.597,
+   "avg_cpu_threads": 0.91,
+   "peak_ram_mib": 72.4,
+   "cgroup_memory_peak_mib": 138.6,
+   "gpu": {
+    "util_mean": 13.7,
+    "util_max": 24.0,
+    "encoder_util_mean": 22.3,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.44,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.08
+    },
+    {
+     "name": "zen",
+     "threads": 0.06
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.49,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.46,
+    "loadavg_before": [
+     0.71,
+     0.72,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.11
+     },
+     {
+      "name": "python3",
+      "threads": 0.07
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 3.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm4-40c0bea713.log",
+   "notes": {
+    "self_reported_s": 0.22,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 5,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:36",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6982,
+   "cpu_s": 0.64,
+   "avg_cpu_threads": 0.92,
+   "peak_ram_mib": 72.5,
+   "cgroup_memory_peak_mib": 139.4,
+   "gpu": {
+    "util_mean": 4.6,
+    "util_max": 8.0,
+    "encoder_util_mean": 2.3,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.36,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.09
+    },
+    {
+     "name": "python3",
+     "threads": 0.06
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.33,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.34,
+    "loadavg_before": [
+     0.65,
+     0.71,
+     0.76
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.1
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 5.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm5-40d5322cb9.log",
+   "notes": {
+    "self_reported_s": 0.22,
+    "pipelines_cached": 25,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:44",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 2.0909,
+   "cpu_s": 2.803,
+   "avg_cpu_threads": 1.34,
+   "peak_ram_mib": 942.3,
+   "cgroup_memory_peak_mib": 965.0,
+   "gpu": {
+    "util_mean": 7.7,
+    "util_max": 41.0,
+    "encoder_util_mean": 8.7,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1287.0,
+    "samples": 21
+   },
+   "foreign_cpu_threads": 0.29,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.06
+    },
+    {
+     "name": "zen",
+     "threads": 0.04
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.3,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.64,
+    "loadavg_before": [
+     0.76,
+     0.73,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.17
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.1
+     }
+    ],
+    "gpu_util_before": 3.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-cold1-5ffa5eaf15.log",
+   "notes": {
+    "self_reported_s": 0.83,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 27
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:51",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7177,
+   "cpu_s": 0.688,
+   "avg_cpu_threads": 0.96,
+   "peak_ram_mib": 124.7,
+   "cgroup_memory_peak_mib": 140.4,
+   "gpu": {
+    "util_mean": 16.4,
+    "util_max": 37.0,
+    "encoder_util_mean": 20.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1289.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.63,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.21
+    },
+    {
+     "name": "python3",
+     "threads": 0.07
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.57,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.34,
+    "loadavg_before": [
+     0.79,
+     0.74,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.06
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "zen",
+      "threads": 0.05
+     }
+    ],
+    "gpu_util_before": 5.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm1-38bba5ca06.log",
+   "notes": {
+    "self_reported_s": 0.24,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:48:57",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6753,
+   "cpu_s": 0.652,
+   "avg_cpu_threads": 0.97,
+   "peak_ram_mib": 124.6,
+   "cgroup_memory_peak_mib": 140.6,
+   "gpu": {
+    "util_mean": 6.3,
+    "util_max": 10.0,
+    "encoder_util_mean": 1.4,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1287.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.68,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.19
+    },
+    {
+     "name": "python3",
+     "threads": 0.12
+    },
+    {
+     "name": "zen",
+     "threads": 0.1
+    }
+   ],
+   "host_other_cpu_threads": 0.62,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.39,
+    "loadavg_before": [
+     0.81,
+     0.75,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     },
+     {
+      "name": "python3",
+      "threads": 0.07
+     },
+     {
+      "name": "zen",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 2.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm2-5df3e50d31.log",
+   "notes": {
+    "self_reported_s": 0.24,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:04",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7551,
+   "cpu_s": 0.7,
+   "avg_cpu_threads": 0.93,
+   "peak_ram_mib": 124.7,
+   "cgroup_memory_peak_mib": 141.3,
+   "gpu": {
+    "util_mean": 18.0,
+    "util_max": 46.0,
+    "encoder_util_mean": 22.8,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1279.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 1.01,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.28
+    },
+    {
+     "name": "RDD Process",
+     "threads": 0.25
+    },
+    {
+     "name": "zen",
+     "threads": 0.15
+    }
+   ],
+   "host_other_cpu_threads": 1.03,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.82,
+    "loadavg_before": [
+     0.74,
+     0.73,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.28
+     },
+     {
+      "name": "zen",
+      "threads": 0.2
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.08
+     }
+    ],
+    "gpu_util_before": 7.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm3-cceb24790c.log",
+   "notes": {
+    "self_reported_s": 0.24,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 4,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:11",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7459,
+   "cpu_s": 0.71,
+   "avg_cpu_threads": 0.95,
+   "peak_ram_mib": 124.7,
+   "cgroup_memory_peak_mib": 141.0,
+   "gpu": {
+    "util_mean": 18.1,
+    "util_max": 41.0,
+    "encoder_util_mean": 23.1,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1295.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 1.11,
+   "foreign_top_processes": [
+    {
+     "name": "RDD Process",
+     "threads": 0.36
+    },
+    {
+     "name": "zen",
+     "threads": 0.31
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.17
+    }
+   ],
+   "host_other_cpu_threads": 1.22,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 1.26,
+    "loadavg_before": [
+     0.86,
+     0.76,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.65
+     },
+     {
+      "name": "zen",
+      "threads": 0.2
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     }
+    ],
+    "gpu_util_before": 5.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm4-a3eda4674e.log",
+   "notes": {
+    "self_reported_s": 0.24,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 5,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:17",
+   "argv": [
+    "ultrafast",
+    "export",
+    "chart.json",
+    "out/chart/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6961,
+   "cpu_s": 0.705,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 125.2,
+   "cgroup_memory_peak_mib": 141.1,
+   "gpu": {
+    "util_mean": 7.0,
+    "util_max": 12.0,
+    "encoder_util_mean": 3.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1239.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.42,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.07
+    },
+    {
+     "name": "python3",
+     "threads": 0.07
+    },
+    {
+     "name": "zen",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.51,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 1.23,
+    "loadavg_before": [
+     0.95,
+     0.78,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.45
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.2
+     },
+     {
+      "name": "zen",
+      "threads": 0.19
+     }
+    ],
+    "gpu_util_before": 2.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm5-f13856b158.log",
+   "notes": {
+    "self_reported_s": 0.24,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 353785,
+    "bitrate": 283028,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:25",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 1.9903,
+   "cpu_s": 2.368,
+   "avg_cpu_threads": 1.19,
+   "peak_ram_mib": 725.9,
+   "cgroup_memory_peak_mib": 753.2,
+   "gpu": {
+    "util_mean": 8.1,
+    "util_max": 29.0,
+    "encoder_util_mean": 6.5,
+    "decoder_util_mean": 2.0,
+    "mem_used_peak_delta_mib": 1316.0,
+    "samples": 20
+   },
+   "foreign_cpu_threads": 0.51,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.17
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.08
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.75,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.59,
+    "loadavg_before": [
+     0.88,
+     0.77,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.12
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.08
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 3.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-cold1-fe1eb83863.log",
+   "notes": {
+    "self_reported_s": 0.64,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 26
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:32",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7822,
+   "cpu_s": 0.765,
+   "avg_cpu_threads": 0.98,
+   "peak_ram_mib": 132.2,
+   "cgroup_memory_peak_mib": 148.8,
+   "gpu": {
+    "util_mean": 8.2,
+    "util_max": 13.0,
+    "encoder_util_mean": 7.6,
+    "decoder_util_mean": 3.4,
+    "mem_used_peak_delta_mib": 1283.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.4,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.09
+    },
+    {
+     "name": "zen",
+     "threads": 0.08
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.42,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.95,
+    "loadavg_before": [
+     0.82,
+     0.76,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.16
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.13
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.1
+     }
+    ],
+    "gpu_util_before": 5.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm1-6b65b0d89c.log",
+   "notes": {
+    "self_reported_s": 0.36,
+    "pipelines_cached": 26,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:39",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.8082,
+   "cpu_s": 0.816,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 132.4,
+   "cgroup_memory_peak_mib": 149.2,
+   "gpu": {
+    "util_mean": 12.5,
+    "util_max": 37.0,
+    "encoder_util_mean": 19.8,
+    "decoder_util_mean": 6.0,
+    "mem_used_peak_delta_mib": 1308.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.61,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.16
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.11
+    },
+    {
+     "name": "python3",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.76,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.79,
+    "loadavg_before": [
+     0.92,
+     0.78,
+     0.79
+    ],
+    "top_processes_before": [
+     {
+      "name": "redis-server",
+      "threads": 0.22
+     },
+     {
+      "name": "zen",
+      "threads": 0.13
+     },
+     {
+      "name": "python3",
+      "threads": 0.07
+     }
+    ],
+    "gpu_util_before": 5.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm2-8ab9a1d9d0.log",
+   "notes": {
+    "self_reported_s": 0.36,
+    "pipelines_cached": 26,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:46",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.748,
+   "cpu_s": 0.738,
+   "avg_cpu_threads": 0.99,
+   "peak_ram_mib": 132.3,
+   "cgroup_memory_peak_mib": 149.7,
+   "gpu": {
+    "util_mean": 11.9,
+    "util_max": 35.0,
+    "encoder_util_mean": 20.0,
+    "decoder_util_mean": 6.2,
+    "mem_used_peak_delta_mib": 1316.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.35,
+   "foreign_top_processes": [
+    {
+     "name": "kwin_wayland",
+     "threads": 0.08
+    },
+    {
+     "name": "zen",
+     "threads": 0.07
+    },
+    {
+     "name": "qs",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.47,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.85,
+    "loadavg_before": [
+     1.09,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.22
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.14
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     }
+    ],
+    "gpu_util_before": 3.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm3-9882735499.log",
+   "notes": {
+    "self_reported_s": 0.35,
+    "pipelines_cached": 26,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 4,
+   "attempt": 1,
+   "time": "2026-11-23T22:49:53",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7619,
+   "cpu_s": 0.75,
+   "avg_cpu_threads": 0.98,
+   "peak_ram_mib": 132.2,
+   "cgroup_memory_peak_mib": 148.5,
+   "gpu": {
+    "util_mean": 11.4,
+    "util_max": 26.0,
+    "encoder_util_mean": 13.1,
+    "decoder_util_mean": 4.0,
+    "mem_used_peak_delta_mib": 1328.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.53,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.18
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.07
+    },
+    {
+     "name": "python3",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.64,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.68,
+    "loadavg_before": [
+     1.08,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.16
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.12
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 5.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm4-9139ac0fe2.log",
+   "notes": {
+    "self_reported_s": 0.35,
+    "pipelines_cached": 26,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 5,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:00",
+   "argv": [
+    "ultrafast",
+    "export",
+    "footage.json",
+    "out/footage/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.8808,
+   "cpu_s": 0.874,
+   "avg_cpu_threads": 0.99,
+   "peak_ram_mib": 132.3,
+   "cgroup_memory_peak_mib": 149.3,
+   "gpu": {
+    "util_mean": 12.1,
+    "util_max": 33.0,
+    "encoder_util_mean": 16.2,
+    "decoder_util_mean": 5.1,
+    "mem_used_peak_delta_mib": 1316.0,
+    "samples": 9
+   },
+   "foreign_cpu_threads": 0.67,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.34
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.07
+    },
+    {
+     "name": "python3",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.81,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.41,
+    "loadavg_before": [
+     0.99,
+     0.81,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.09
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.05
+     }
+    ],
+    "gpu_util_before": 4.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm5-2217e34612.log",
+   "notes": {
+    "self_reported_s": 0.35,
+    "pipelines_cached": 26,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 2925058,
+    "bitrate": 2340046,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:09",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 2.0053,
+   "cpu_s": 2.264,
+   "avg_cpu_threads": 1.13,
+   "peak_ram_mib": 889.5,
+   "cgroup_memory_peak_mib": 913.1,
+   "gpu": {
+    "util_mean": 9.5,
+    "util_max": 53.0,
+    "encoder_util_mean": 6.2,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1271.0,
+    "samples": 20
+   },
+   "foreign_cpu_threads": 0.81,
+   "foreign_top_processes": [
+    {
+     "name": "RDD Process",
+     "threads": 0.37
+    },
+    {
+     "name": "zen",
+     "threads": 0.08
+    },
+    {
+     "name": "python3",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.83,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.87,
+    "loadavg_before": [
+     0.99,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.41
+     },
+     {
+      "name": "zen",
+      "threads": 0.12
+     },
+     {
+      "name": "python3",
+      "threads": 0.07
+     }
+    ],
+    "gpu_util_before": 1.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-cold1-162090ba5c.log",
+   "notes": {
+    "self_reported_s": 0.71,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 27
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:16",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7916,
+   "cpu_s": 0.692,
+   "avg_cpu_threads": 0.87,
+   "peak_ram_mib": 115.5,
+   "cgroup_memory_peak_mib": 140.9,
+   "gpu": {
+    "util_mean": 25.9,
+    "util_max": 50.0,
+    "encoder_util_mean": 16.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1279.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.53,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.18
+    },
+    {
+     "name": "python3",
+     "threads": 0.08
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.08
+    }
+   ],
+   "host_other_cpu_threads": 0.53,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.52,
+    "loadavg_before": [
+     0.99,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.25
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.05
+     }
+    ],
+    "gpu_util_before": 4.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm1-37297438fa.log",
+   "notes": {
+    "self_reported_s": 0.3,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:23",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7774,
+   "cpu_s": 0.698,
+   "avg_cpu_threads": 0.9,
+   "peak_ram_mib": 115.5,
+   "cgroup_memory_peak_mib": 140.6,
+   "gpu": {
+    "util_mean": 36.0,
+    "util_max": 77.0,
+    "encoder_util_mean": 20.4,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1279.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.81,
+   "foreign_top_processes": [
+    {
+     "name": "RDD Process",
+     "threads": 0.27
+    },
+    {
+     "name": "zen",
+     "threads": 0.13
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.1
+    }
+   ],
+   "host_other_cpu_threads": 0.9,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.47,
+    "loadavg_before": [
+     0.99,
+     0.83,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "RDD Process",
+      "threads": 0.1
+     },
+     {
+      "name": "zen",
+      "threads": 0.09
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 3.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm2-ce76559ebc.log",
+   "notes": {
+    "self_reported_s": 0.3,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:30",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7392,
+   "cpu_s": 0.656,
+   "avg_cpu_threads": 0.89,
+   "peak_ram_mib": 80.6,
+   "cgroup_memory_peak_mib": 139.8,
+   "gpu": {
+    "util_mean": 20.4,
+    "util_max": 53.0,
+    "encoder_util_mean": 10.8,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1279.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.46,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.09
+    },
+    {
+     "name": "python3",
+     "threads": 0.09
+    },
+    {
+     "name": "qs",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.51,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.27,
+    "loadavg_before": [
+     0.91,
+     0.81,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 1.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm3-e349d17614.log",
+   "notes": {
+    "self_reported_s": 0.3,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 4,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:36",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7285,
+   "cpu_s": 0.64,
+   "avg_cpu_threads": 0.88,
+   "peak_ram_mib": 123.1,
+   "cgroup_memory_peak_mib": 140.1,
+   "gpu": {
+    "util_mean": 33.6,
+    "util_max": 75.0,
+    "encoder_util_mean": 19.3,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1251.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.23,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.05
+    },
+    {
+     "name": "zen",
+     "threads": 0.03
+    },
+    {
+     "name": "qs",
+     "threads": 0.03
+    }
+   ],
+   "host_other_cpu_threads": 0.33,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.93,
+    "loadavg_before": [
+     0.92,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.19
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.17
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.14
+     }
+    ],
+    "gpu_util_before": 3.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm4-d378dec626.log",
+   "notes": {
+    "self_reported_s": 0.3,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 5,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:43",
+   "argv": [
+    "ultrafast",
+    "export",
+    "effects.json",
+    "out/effects/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7201,
+   "cpu_s": 0.635,
+   "avg_cpu_threads": 0.88,
+   "peak_ram_mib": 123.1,
+   "cgroup_memory_peak_mib": 140.1,
+   "gpu": {
+    "util_mean": 29.9,
+    "util_max": 55.0,
+    "encoder_util_mean": 16.1,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1278.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.33,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.07
+    },
+    {
+     "name": "zen",
+     "threads": 0.06
+    },
+    {
+     "name": "qs",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.37,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.37,
+    "loadavg_before": [
+     0.93,
+     0.82,
+     0.8
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.07
+     },
+     {
+      "name": "zen",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 2.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm5-2558411dda.log",
+   "notes": {
+    "self_reported_s": 0.3,
+    "pipelines_cached": 27,
+    "pipelines_compiled": 0
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1590770,
+    "bitrate": 1272616,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warmup",
+   "index": 0,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:50",
+   "argv": [
+    "ultrafast",
+    "render",
+    "title.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/title/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.5019,
+   "cpu_s": 0.512,
+   "avg_cpu_threads": 1.02,
+   "peak_ram_mib": 241.6,
+   "cgroup_memory_peak_mib": 253.3,
+   "gpu": {
+    "util_mean": 3.6,
+    "util_max": 4.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 467.0,
+    "samples": 5
+   },
+   "foreign_cpu_threads": 0.3,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.08
+    },
+    {
+     "name": "qs",
+     "threads": 0.04
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.43,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.38,
+    "loadavg_before": [
+     0.79,
+     0.79,
+     0.79
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "zen",
+      "threads": 0.05
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 4.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warmup0-3d45c287cb.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:50:55",
+   "argv": [
+    "ultrafast",
+    "render",
+    "title.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/title/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.2147,
+   "cpu_s": 0.216,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 27.6,
+   "cgroup_memory_peak_mib": 47.3,
+   "gpu": {
+    "util_mean": 5.0,
+    "util_max": 8.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 467.0,
+    "samples": 2
+   },
+   "foreign_cpu_threads": 0.56,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.19
+    },
+    {
+     "name": "zen",
+     "threads": 0.14
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.09
+    }
+   ],
+   "host_other_cpu_threads": 0.58,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.4,
+    "loadavg_before": [
+     0.72,
+     0.78,
+     0.79
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.05
+     },
+     {
+      "name": "zen",
+      "threads": 0.04
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 4.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm1-0b8da5b009.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:01",
+   "argv": [
+    "ultrafast",
+    "render",
+    "title.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/title/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.2414,
+   "cpu_s": 0.237,
+   "avg_cpu_threads": 0.98,
+   "peak_ram_mib": 35.5,
+   "cgroup_memory_peak_mib": 47.6,
+   "gpu": {
+    "util_mean": 12.7,
+    "util_max": 18.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 16.0,
+    "samples": 3
+   },
+   "foreign_cpu_threads": 0.58,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.21
+    },
+    {
+     "name": "zen",
+     "threads": 0.17
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.08
+    }
+   ],
+   "host_other_cpu_threads": 0.64,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.35,
+    "loadavg_before": [
+     0.66,
+     0.77,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 1.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm2-93dfb8f72a.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:06",
+   "argv": [
+    "ultrafast",
+    "render",
+    "title.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/title/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.216,
+   "cpu_s": 0.218,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 27.7,
+   "cgroup_memory_peak_mib": 46.8,
+   "gpu": {
+    "util_mean": 11.0,
+    "util_max": 11.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 467.0,
+    "samples": 2
+   },
+   "foreign_cpu_threads": 0.42,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.09
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.09
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.09
+    }
+   ],
+   "host_other_cpu_threads": 0.29,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.9,
+    "loadavg_before": [
+     0.69,
+     0.77,
+     0.79
+    ],
+    "top_processes_before": [
+     {
+      "name": "zen",
+      "threads": 0.16
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.12
+     },
+     {
+      "name": "claude-desktop",
+      "threads": 0.09
+     }
+    ],
+    "gpu_util_before": 7.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-warm3-3fdd4bd506.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warmup",
+   "index": 0,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:13",
+   "argv": [
+    "ultrafast",
+    "render",
+    "chart.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/chart/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.8928,
+   "cpu_s": 1.592,
+   "avg_cpu_threads": 1.78,
+   "peak_ram_mib": 659.8,
+   "cgroup_memory_peak_mib": 681.9,
+   "gpu": {
+    "util_mean": 1.9,
+    "util_max": 3.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 686.0,
+    "samples": 9
+   },
+   "foreign_cpu_threads": 0.35,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.09
+    },
+    {
+     "name": "qs",
+     "threads": 0.04
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.03
+    }
+   ],
+   "host_other_cpu_threads": 0.34,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.31,
+    "loadavg_before": [
+     0.72,
+     0.78,
+     0.79
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 6.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warmup0-6a88f8f6e0.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:18",
+   "argv": [
+    "ultrafast",
+    "render",
+    "chart.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/chart/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.2174,
+   "cpu_s": 0.219,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 31.1,
+   "cgroup_memory_peak_mib": 50.9,
+   "gpu": {
+    "util_mean": 3.7,
+    "util_max": 4.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 686.0,
+    "samples": 3
+   },
+   "foreign_cpu_threads": 0.46,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.18
+    },
+    {
+     "name": "qs",
+     "threads": 0.09
+    },
+    {
+     "name": "zen",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.42,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.28,
+    "loadavg_before": [
+     0.66,
+     0.76,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.05
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.03
+     }
+    ],
+    "gpu_util_before": 2.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm1-6aa5149424.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:23",
+   "argv": [
+    "ultrafast",
+    "render",
+    "chart.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/chart/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.2017,
+   "cpu_s": 0.203,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 30.7,
+   "cgroup_memory_peak_mib": 49.4,
+   "gpu": {
+    "util_mean": 4.0,
+    "util_max": 4.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 334.0,
+    "samples": 2
+   },
+   "foreign_cpu_threads": 0.4,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.15
+    },
+    {
+     "name": "qs",
+     "threads": 0.1
+    },
+    {
+     "name": "zen",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.48,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.24,
+    "loadavg_before": [
+     0.61,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.03
+     }
+    ],
+    "gpu_util_before": 2.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm2-928789f602.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "chart",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:29",
+   "argv": [
+    "ultrafast",
+    "render",
+    "chart.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/chart/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.2003,
+   "cpu_s": 0.202,
+   "avg_cpu_threads": 1.01,
+   "peak_ram_mib": 30.7,
+   "cgroup_memory_peak_mib": 50.1,
+   "gpu": {
+    "util_mean": 5.0,
+    "util_max": 5.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 302.0,
+    "samples": 2
+   },
+   "foreign_cpu_threads": 0.2,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.05
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.05
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.19,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.22,
+    "loadavg_before": [
+     0.66,
+     0.76,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.05
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.03
+     }
+    ],
+    "gpu_util_before": 2.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/chart-ultrafast-default-warm3-dc2ce380c8.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warmup",
+   "index": 0,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:35",
+   "argv": [
+    "ultrafast",
+    "render",
+    "footage.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/footage/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7952,
+   "cpu_s": 1.305,
+   "avg_cpu_threads": 1.64,
+   "peak_ram_mib": 476.1,
+   "cgroup_memory_peak_mib": 493.7,
+   "gpu": {
+    "util_mean": 3.0,
+    "util_max": 5.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 8.2,
+    "mem_used_peak_delta_mib": 1124.0,
+    "samples": 8
+   },
+   "foreign_cpu_threads": 0.26,
+   "foreign_top_processes": [
+    {
+     "name": "zen",
+     "threads": 0.06
+    },
+    {
+     "name": "python3",
+     "threads": 0.06
+    },
+    {
+     "name": "qs",
+     "threads": 0.03
+    }
+   ],
+   "host_other_cpu_threads": 0.31,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.26,
+    "loadavg_before": [
+     0.61,
+     0.74,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.03
+     }
+    ],
+    "gpu_util_before": 4.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warmup0-1ccbe180f0.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:41",
+   "argv": [
+    "ultrafast",
+    "render",
+    "footage.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/footage/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.6656,
+   "cpu_s": 0.553,
+   "avg_cpu_threads": 0.83,
+   "peak_ram_mib": 71.8,
+   "cgroup_memory_peak_mib": 93.1,
+   "gpu": {
+    "util_mean": 3.3,
+    "util_max": 5.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 7.4,
+    "mem_used_peak_delta_mib": 1124.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.35,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.05
+    },
+    {
+     "name": "python3",
+     "threads": 0.05
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.3,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.27,
+    "loadavg_before": [
+     0.64,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.05
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.03
+     }
+    ],
+    "gpu_util_before": 1.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm1-e2999acca3.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:47",
+   "argv": [
+    "ultrafast",
+    "render",
+    "footage.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/footage/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7011,
+   "cpu_s": 0.568,
+   "avg_cpu_threads": 0.81,
+   "peak_ram_mib": 80.7,
+   "cgroup_memory_peak_mib": 93.1,
+   "gpu": {
+    "util_mean": 2.4,
+    "util_max": 4.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.6,
+    "mem_used_peak_delta_mib": 1124.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.44,
+   "foreign_top_processes": [
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.14
+    },
+    {
+     "name": "python3",
+     "threads": 0.07
+    },
+    {
+     "name": "qs",
+     "threads": 0.06
+    }
+   ],
+   "host_other_cpu_threads": 0.43,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.35,
+    "loadavg_before": [
+     0.59,
+     0.74,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 1.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm2-9f4d3a33e4.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "footage",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:53",
+   "argv": [
+    "ultrafast",
+    "render",
+    "footage.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/footage/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.7099,
+   "cpu_s": 0.607,
+   "avg_cpu_threads": 0.86,
+   "peak_ram_mib": 71.8,
+   "cgroup_memory_peak_mib": 93.1,
+   "gpu": {
+    "util_mean": 10.7,
+    "util_max": 15.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1108.0,
+    "samples": 7
+   },
+   "foreign_cpu_threads": 0.41,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.07
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.06
+    },
+    {
+     "name": "python3",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.44,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 1.08,
+    "loadavg_before": [
+     0.62,
+     0.74,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "python",
+      "threads": 0.47
+     },
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.1
+     },
+     {
+      "name": "python3",
+      "threads": 0.08
+     }
+    ],
+    "gpu_util_before": 2.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/footage-ultrafast-default-warm3-7c9f9624ee.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warmup",
+   "index": 0,
+   "attempt": 1,
+   "time": "2026-11-23T22:51:58",
+   "argv": [
+    "ultrafast",
+    "render",
+    "effects.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/effects/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.4317,
+   "cpu_s": 0.432,
+   "avg_cpu_threads": 1.0,
+   "peak_ram_mib": 36.2,
+   "cgroup_memory_peak_mib": 48.9,
+   "gpu": {
+    "util_mean": 4.2,
+    "util_max": 5.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 524.0,
+    "samples": 5
+   },
+   "foreign_cpu_threads": 0.39,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.09
+    },
+    {
+     "name": "python3",
+     "threads": 0.09
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.07
+    }
+   ],
+   "host_other_cpu_threads": 0.32,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.36,
+    "loadavg_before": [
+     0.65,
+     0.75,
+     0.78
+    ],
+    "top_processes_before": [
+     {
+      "name": "qs",
+      "threads": 0.08
+     },
+     {
+      "name": "python3",
+      "threads": 0.05
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.05
+     }
+    ],
+    "gpu_util_before": 3.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warmup0-7b8360186b.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-23T22:52:04",
+   "argv": [
+    "ultrafast",
+    "render",
+    "effects.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/effects/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.4849,
+   "cpu_s": 0.485,
+   "avg_cpu_threads": 1.0,
+   "peak_ram_mib": 36.6,
+   "cgroup_memory_peak_mib": 49.9,
+   "gpu": {
+    "util_mean": 9.6,
+    "util_max": 14.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 572.0,
+    "samples": 5
+   },
+   "foreign_cpu_threads": 0.39,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.08
+    },
+    {
+     "name": "python3",
+     "threads": 0.06
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.42,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.42,
+    "loadavg_before": [
+     0.62,
+     0.74,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "qs",
+      "threads": 0.08
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 4.0
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm1-6b0a2f6356.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 2,
+   "attempt": 1,
+   "time": "2026-11-23T22:52:10",
+   "argv": [
+    "ultrafast",
+    "render",
+    "effects.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/effects/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.4566,
+   "cpu_s": 0.457,
+   "avg_cpu_threads": 1.0,
+   "peak_ram_mib": 37.4,
+   "cgroup_memory_peak_mib": 50.5,
+   "gpu": {
+    "util_mean": 2.4,
+    "util_max": 3.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 540.0,
+    "samples": 5
+   },
+   "foreign_cpu_threads": 0.28,
+   "foreign_top_processes": [
+    {
+     "name": "qs",
+     "threads": 0.04
+    },
+    {
+     "name": "python3",
+     "threads": 0.04
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.04
+    }
+   ],
+   "host_other_cpu_threads": 0.36,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.34,
+    "loadavg_before": [
+     0.57,
+     0.72,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "qs",
+      "threads": 0.07
+     },
+     {
+      "name": "python3",
+      "threads": 0.06
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 4.5
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm2-3921275f5e.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "preview",
+   "comp": "effects",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "warm",
+   "index": 3,
+   "attempt": 1,
+   "time": "2026-11-23T22:52:16",
+   "argv": [
+    "ultrafast",
+    "render",
+    "effects.json",
+    "--at",
+    "5.0",
+    "--out",
+    "out/effects/ultrafast-preview.png"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 0.4429,
+   "cpu_s": 0.445,
+   "avg_cpu_threads": 1.0,
+   "peak_ram_mib": 36.0,
+   "cgroup_memory_peak_mib": 50.3,
+   "gpu": {
+    "util_mean": 1.6,
+    "util_max": 2.0,
+    "encoder_util_mean": 0.0,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 572.0,
+    "samples": 5
+   },
+   "foreign_cpu_threads": 0.34,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.09
+    },
+    {
+     "name": "qs",
+     "threads": 0.05
+    },
+    {
+     "name": "kwin_wayland",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.31,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 0.38,
+    "loadavg_before": [
+     0.61,
+     0.73,
+     0.77
+    ],
+    "top_processes_before": [
+     {
+      "name": "Isolated Web Co",
+      "threads": 0.11
+     },
+     {
+      "name": "python3",
+      "threads": 0.07
+     },
+     {
+      "name": "qs",
+      "threads": 0.04
+     }
+    ],
+    "gpu_util_before": 1.2
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/effects-ultrafast-default-warm3-97b42bab76.log",
+   "notes": {},
+   "output": {
+    "exists": true
+   },
+   "ok": true,
+   "contaminated": false
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 1,
+   "time": "2026-11-24T01:21:44",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 2.0272,
+   "cpu_s": 2.009,
+   "avg_cpu_threads": 0.99,
+   "peak_ram_mib": 516.1,
+   "cgroup_memory_peak_mib": 772.8,
+   "gpu": {
+    "util_mean": 7.2,
+    "util_max": 30.0,
+    "encoder_util_mean": 13.9,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1078.0,
+    "samples": 20
+   },
+   "foreign_cpu_threads": 2.18,
+   "foreign_top_processes": [
+    {
+     "name": "python",
+     "threads": 0.93
+    },
+    {
+     "name": "redis-server",
+     "threads": 0.79
+    },
+    {
+     "name": "zen",
+     "threads": 0.1
+    }
+   ],
+   "host_other_cpu_threads": 2.33,
+   "quiet_before": {
+    "waited_s": 6348.7,
+    "busy_threads_before": 0.37,
+    "loadavg_before": [
+     1.64,
+     2.01,
+     2.55
+    ],
+    "top_processes_before": [
+     {
+      "name": "python3",
+      "threads": 0.07
+     },
+     {
+      "name": "kwin_wayland",
+      "threads": 0.06
+     },
+     {
+      "name": "zen",
+      "threads": 0.06
+     }
+    ],
+    "gpu_util_before": 5.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-cold1-d038756ecc.log",
+   "notes": {
+    "self_reported_s": 0.52,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 25
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
+    ],
+    "ok": true,
+    "problems": []
+   },
+   "ok": true,
+   "contaminated": true
+  },
+  {
+   "phase": "measure",
+   "comp": "title",
+   "tool": "ultrafast",
+   "config": "default",
+   "kind": "cold",
+   "index": 1,
+   "attempt": 2,
+   "time": "2026-11-24T01:21:52",
+   "argv": [
+    "ultrafast",
+    "export",
+    "title.json",
+    "out/title/ultrafast-default.mp4",
+    "--crf",
+    "18"
+   ],
+   "cwd": "ultrafast",
+   "returncode": 0,
+   "wall_s": 1.7676,
+   "cpu_s": 1.726,
+   "avg_cpu_threads": 0.98,
+   "peak_ram_mib": 492.2,
+   "cgroup_memory_peak_mib": 538.0,
+   "gpu": {
+    "util_mean": 6.4,
+    "util_max": 31.0,
+    "encoder_util_mean": 15.8,
+    "decoder_util_mean": 0.0,
+    "mem_used_peak_delta_mib": 1079.0,
+    "samples": 18
+   },
+   "foreign_cpu_threads": 0.45,
+   "foreign_top_processes": [
+    {
+     "name": "python3",
+     "threads": 0.08
+    },
+    {
+     "name": "zen",
+     "threads": 0.06
+    },
+    {
+     "name": "Isolated Web Co",
+     "threads": 0.05
+    }
+   ],
+   "host_other_cpu_threads": 0.49,
+   "quiet_before": {
+    "waited_s": 4.7,
+    "busy_threads_before": 1.02,
+    "loadavg_before": [
+     1.54,
+     1.97,
+     2.54
+    ],
+    "top_processes_before": [
+     {
+      "name": "python",
+      "threads": 0.34
+     },
+     {
+      "name": "zen",
+      "threads": 0.14
+     },
+     {
+      "name": "redis-server",
+      "threads": 0.14
+     }
+    ],
+    "gpu_util_before": 4.8
+   },
+   "foreign_renderers_during": [],
+   "leftover_processes": [],
+   "log": "logs/title-ultrafast-default-cold1-a52796c0eb.log",
+   "notes": {
+    "self_reported_s": 0.52,
+    "pipelines_cached": 0,
+    "pipelines_compiled": 25
+   },
+   "output": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pix_fmt": "yuv420p",
+    "fps": "30/1",
+    "frames": 300,
+    "duration_s": 10.0,
+    "size_bytes": 1084482,
+    "bitrate": 867585,
+    "color": [
+     "bt709",
+     "bt709",
+     "bt709"
     ],
     "ok": true,
     "problems": []

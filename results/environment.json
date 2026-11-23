@@ -14,8 +14,8 @@
  "ffmpeg_system": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
  "ffmpeg_hyperframes": "ffmpeg version n9.0.2-61-gd59078794d-20261121 Copyright (c) 2000-2026 the FFmpeg developers",
  "ultrafast": {
-  "version": "ultrafast 0.1.1",
-  "binary_sha256": "409b020e9a6e85e46a252248291111bec3fec2a0dab5a87bee94164d9b0c2b23",
+  "version": "ultrafast 0.2.0",
+  "binary_sha256": "ba045ae42109209cb776078b059ed441e6f511d5242bd895e36cea7a0c7fc978",
   "device": "backend: vulkan\ndevice:  NVIDIA GeForce RTX 5090"
  },
  "remotion": {

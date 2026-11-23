@@ -12,7 +12,7 @@ cd "$(dirname "$0")"
 BENCH=$PWD
 source harness/env.sh
 if [ -z "${UF:-}" ] || [ ! -x "$UF" ]; then
-  echo "put the ultrafast 0.1.1 release on PATH, or set UF=/path/to/ultrafast" >&2
+  echo "put the ultrafast 0.2.0 release on PATH, or set UF=/path/to/ultrafast" >&2
   exit 1
 fi
 mkdir -p results logs out frames

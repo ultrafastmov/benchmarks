@@ -22,11 +22,11 @@ FONT = os.path.join(BENCH, "assets", "fonts", "GeistMono-VF.ttf")
 TOOLS = ["ultrafast", "remotion", "hyperframes"]
 MOMENTS = [0.5, 1.5, 3.0, 5.0, 7.0, 9.5]  # seconds
 COMPS = {"title": (1080, 1920), "chart": (1920, 1080), "footage": (1080, 1920), "effects": (1920, 1080)}
-# The YUV matrix each tool encodes with. HyperFrames tags its files (BT.709);
-# ultrafast 0.1.1 (BT.709) and Remotion 4.0.545 (BT.601, from Chrome's sRGB frames
-# through libx264) write no colour tags, and FFmpeg assumes BT.601 for untagged
-# video, so the frames are decoded with the matrix each tool actually used
-# (checked on a flat #fbbf24 area: see README, "Colour tags").
+# The YUV matrix each tool encodes with. HyperFrames and ultrafast 0.2.0 tag their
+# files as BT.709 (ultrafast 0.1.1 wrote BT.709 without tags); Remotion 4.0.545
+# writes BT.601 (from Chrome's sRGB frames through libx264) without tags, and FFmpeg
+# assumes BT.601 for untagged video, so the frames are decoded with the matrix each
+# tool actually used (checked on a flat #fbbf24 area: see README, "Colour tags").
 MATRIX = {"ultrafast": "bt709", "remotion": "bt601", "hyperframes": "bt709"}
 
 

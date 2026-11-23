@@ -1,74 +1,74 @@
 {
  "title": {
   "remotion": {
-   "ssim_all": 0.988863,
-   "psnr_avg_db": 29.891148
+   "ssim_all": 0.988582,
+   "psnr_avg_db": 29.891776
   },
   "hyperframes": {
-   "ssim_all": 0.984902,
-   "psnr_avg_db": 29.041511
+   "ssim_all": 0.984568,
+   "psnr_avg_db": 29.036108
   },
   "remotion fastest (bundled-vulkan-nvenc-c24)": {
-   "ssim_all": 0.989475,
-   "psnr_avg_db": 30.012407
+   "ssim_all": 0.989221,
+   "psnr_avg_db": 30.020229
   },
   "hyperframes fastest (w8)": {
-   "ssim_all": 0.984893,
-   "psnr_avg_db": 29.04143
+   "ssim_all": 0.984557,
+   "psnr_avg_db": 29.035992
   }
  },
  "chart": {
   "remotion": {
-   "ssim_all": 0.992791,
-   "psnr_avg_db": 34.59956
+   "ssim_all": 0.992708,
+   "psnr_avg_db": 34.561564
   },
   "hyperframes": {
-   "ssim_all": 0.991026,
-   "psnr_avg_db": 34.041912
+   "ssim_all": 0.990909,
+   "psnr_avg_db": 34.00418
   },
   "remotion fastest (bundled-angle-egl-c16)": {
-   "ssim_all": 0.992791,
-   "psnr_avg_db": 34.599453
+   "ssim_all": 0.992708,
+   "psnr_avg_db": 34.561437
   },
   "hyperframes fastest (w4)": {
-   "ssim_all": 0.991026,
-   "psnr_avg_db": 34.041912
+   "ssim_all": 0.990909,
+   "psnr_avg_db": 34.00418
   }
  },
  "footage": {
   "remotion": {
-   "ssim_all": 0.94862,
-   "psnr_avg_db": 27.541477
+   "ssim_all": 0.948133,
+   "psnr_avg_db": 27.540022
   },
   "hyperframes": {
-   "ssim_all": 0.936437,
-   "psnr_avg_db": 25.845303
+   "ssim_all": 0.936255,
+   "psnr_avg_db": 25.844675
   },
   "remotion fastest (bundled-vulkan-nvenc-c8)": {
-   "ssim_all": 0.948841,
-   "psnr_avg_db": 27.559349
+   "ssim_all": 0.94848,
+   "psnr_avg_db": 27.557839
   },
   "hyperframes fastest (w8)": {
-   "ssim_all": 0.936437,
-   "psnr_avg_db": 25.845303
+   "ssim_all": 0.936255,
+   "psnr_avg_db": 25.844675
   }
  },
  "effects": {
   "remotion": {
-   "ssim_all": 0.625479,
-   "psnr_avg_db": 25.235625
+   "ssim_all": 0.628114,
+   "psnr_avg_db": 25.246795
   },
   "hyperframes": {
-   "ssim_all": 0.625831,
-   "psnr_avg_db": 25.504757
+   "ssim_all": 0.628495,
+   "psnr_avg_db": 25.517248
   },
   "remotion fastest (bundled-vulkan-nvenc-c12)": {
-   "ssim_all": 0.639815,
-   "psnr_avg_db": 25.375617
+   "ssim_all": 0.642572,
+   "psnr_avg_db": 25.38812
   },
   "hyperframes fastest (w12)": {
-   "ssim_all": 0.625821,
-   "psnr_avg_db": 25.504631
+   "ssim_all": 0.628481,
+   "psnr_avg_db": 25.517112
   }
  }
 }

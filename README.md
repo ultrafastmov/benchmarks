@@ -8,12 +8,12 @@ all three tools, plus a fourth (effects) reported separately.
 **Warm median seconds, 300 frames each (lower is better).** In brackets: how many times
 ultrafast's time each one is.
 
-| Scene | ultrafast 0.1.1 | Remotion 4.0.545, default | Remotion, fastest found | HyperFrames 0.9.79, default | HyperFrames, fastest found |
+| Scene | ultrafast 0.2.0 | Remotion 4.0.545, default | Remotion, fastest found | HyperFrames 0.9.79, default | HyperFrames, fastest found |
 |---|---:|---:|---:|---:|---:|
-| title | **0.85** | 4.73 (5.6×) | 2.32 (2.7×) | 3.92 (4.6×) | 3.53 (4.1×) |
-| chart | **0.88** | 4.45 (5.1×) | 2.25 (2.6×) | 3.71 (4.2×) | 3.31 (3.8×) |
-| footage | **0.98** | 8.53 (8.7×) | 6.69 (6.8×) | 5.05 (5.1×) | 4.46 (4.5×) |
-| *effects (not in the headline: favours a GPU engine)* | *0.97* | *5.95 (6.2×)* | *2.98 (3.1×)* | *6.42 (6.6×)* | *5.23 (5.4×)* |
+| title | **0.66** | 4.73 (7.2×) | 2.32 (3.5×) | 3.92 (5.9×) | 3.53 (5.3×) |
+| chart | **0.72** | 4.45 (6.2×) | 2.25 (3.1×) | 3.71 (5.2×) | 3.31 (4.6×) |
+| footage | **0.78** | 8.53 (10.9×) | 6.69 (8.6×) | 5.05 (6.5×) | 4.46 (5.7×) |
+| *effects (not in the headline: favours a GPU engine)* | *0.74* | *5.95 (8.1×)* | *2.98 (4.0×)* | *6.42 (8.7×)* | *5.23 (7.1×)* |
 
 "Fastest found" is the quickest of all the configurations measured for that tool on that
 scene. That covers every concurrency, the GPU options, a prebuilt Remotion bundle, and
@@ -22,11 +22,11 @@ three of the four scenes, which is a lower quality setting than the CRF 18 used 
 else (see the full tables).
 
 ultrafast was faster in every scene and every configuration measured. That includes cold
-first runs (2.5–2.6 s, against 8.4–12.6 s for Remotion and 3.7–6.4 s for HyperFrames) and
-writing one still frame (0.34–0.82 s, against 2.2–2.4 s and 1.5–2.1 s). Where it did
-worse: at the same nominal CRF 18 its NVENC files for the title, chart and footage scenes
-are 2.0 to 4.4 times the size of the libx264 files from the two browser tools; it needs a
-GPU; and it writes no colour tags into its H.264 (see the caveats).
+first runs (1.8–2.1 s, against 8.4–12.6 s for Remotion and 3.7–6.4 s for HyperFrames) and
+writing one still frame (0.20–0.70 s, against 2.2–2.4 s and 1.5–2.1 s). Where it did
+worse: it needs a GPU for this speed, and at the same nominal CRF 18 its files for the
+title, chart and footage scenes are 1.15 to 1.75 times the size of Remotion's libx264
+files (0.62 to 1.23 times HyperFrames'; see the caveats).
 
 Read the [caveats](#caveats-read-these-before-quoting-a-number) before quoting any of this.
 
@@ -140,20 +140,30 @@ The busy threads, load average and top processes at the start of every run are i
 `results.json`. If more than 1.5 threads of other CPU load, or another renderer, showed up
 *during* a run, that run was discarded (kept in `results/runs.jsonl`, flagged) and repeated.
 
+ultrafast's rows were measured again with the 0.2.0 release on the night of 23 November
+2026, through the same harness and the same gates. Three of those runs were discarded
+for other load and repeated. One cold run was set aside: the harness had repeated a
+discarded cold run without clearing the caches that run had filled, so the repeat was not
+cold. It is kept in `results/runs.jsonl` and marked `invalid`; `bench.py` now clears the
+caches before every cold attempt, and that cold run was measured again later that night.
+
 ## Results
 
 All numbers are from `results.json`. `results/tables.md` holds the same tables, regenerated
 by `run.sh`. Every run counted here came after the machine was confirmed quiet; an earlier
 attempt that overlapped another benchmark on the same machine was thrown away whole.
+ultrafast's rows are from the 0.2.0 release, measured on the night of 23 November 2026;
+Remotion's and HyperFrames' are from the full run on 22 November (see caveat 10). The 0.1.1
+numbers first published here are in this repository's history.
 
 ### All four scenes: warm median seconds (300 frames, 10 s video, H.264)
 
 | Composition | ultrafast | Remotion default | Remotion fastest | HyperFrames default | HyperFrames fastest |
 |---|---:|---:|---:|---:|---:|
-| title | **0.85** | 4.73 (5.6×) | 2.32 (2.7×) | 3.92 (4.6×) | 3.53 (4.1×) |
-| chart | **0.88** | 4.45 (5.1×) | 2.25 (2.6×) | 3.71 (4.2×) | 3.31 (3.8×) |
-| footage | **0.98** | 8.53 (8.7×) | 6.69 (6.8×) | 5.05 (5.1×) | 4.46 (4.5×) |
-| effects | **0.97** | 5.95 (6.2×) | 2.98 (3.1×) | 6.42 (6.6×) | 5.23 (5.4×) |
+| title | **0.66** | 4.73 (7.2×) | 2.32 (3.5×) | 3.92 (5.9×) | 3.53 (5.3×) |
+| chart | **0.72** | 4.45 (6.2×) | 2.25 (3.1×) | 3.71 (5.2×) | 3.31 (4.6×) |
+| footage | **0.78** | 8.53 (10.9×) | 6.69 (8.6×) | 5.05 (6.5×) | 4.46 (5.7×) |
+| effects | **0.74** | 5.95 (8.1×) | 2.98 (4.0×) | 6.42 (8.7×) | 5.23 (7.1×) |
 
 (×) = that time divided by ultrafast's: how many times longer the tool took.
 
@@ -168,23 +178,23 @@ Fastest configuration found for each browser tool:
 
 | Composition | ultrafast | Remotion | HyperFrames |
 |---|---:|---:|---:|
-| title | 2.49 | 8.46 | 3.93 |
-| chart | 2.63 | 8.41 | 3.66 |
-| footage | 2.62 | 12.56 | 5.55 |
-| effects | 2.54 | 9.69 | 6.43 |
+| title | 1.77 | 8.46 | 3.93 |
+| chart | 2.09 | 8.41 | 3.66 |
+| footage | 1.99 | 12.56 | 5.55 |
+| effects | 2.01 | 9.69 | 6.43 |
 
 ### Was the machine quiet?
 
-- runs counted: 560; discarded because other work overlapped them: 0; failed: 0
+- runs counted: 560; discarded because other work overlapped them: 3; set aside as invalid (`invalid` in runs.jsonl gives why): 1; failed: 0
 - CPU busy just before a run (whole machine, threads of 32): median 0.19, max 1.45
-- 1-minute load average at the start of a run: median 2.75, max 18.51 (includes the benchmark's own previous run)
-- other processes' CPU during a run: median 0.19 threads, max 1.05
+- 1-minute load average at the start of a run: median 2.62, max 18.51 (includes the benchmark's own previous run)
+- other processes' CPU during a run: median 0.2 threads, max 1.11
 
 ### Every measured configuration
 
 | Composition | Tool | Configuration | Warm median s (min–max, n) | Cold s | CPU threads avg | Peak RAM MiB | GPU util % (mean) | GPU mem MiB | Output MB |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| title | ultrafast | default command | 0.85 (0.84–0.86, 5) | 2.49 | 0.7 | 85 | 7 | 1091 | 2.7 |
+| title | ultrafast | default command | 0.66 (0.65–0.71, 5) | 1.77 | 0.9 | 73 | 14 | 1079 | 1.1 |
 | title | remotion | prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 24 | 2.32 (2.31–2.60, 5) | – | 5.1 | 1668 | 8 | 1730 | 1.5 |
 | title | remotion | prebuilt bundle, --gl=vulkan, --concurrency 24 | 2.42 (2.28–2.47, 5) | – | 8.2 | 3027 | 5 | 1087 | 0.7 |
 | title | remotion | prebuilt bundle, --gl=angle-egl, --concurrency 12 | 2.63 (2.62–2.66, 5) | – | 6.5 | 2525 | 0 | 0 | 0.6 |
@@ -198,7 +208,7 @@ Fastest configuration found for each browser tool:
 | title | hyperframes | --gpu --workers 8 | 3.93 (3.82–3.96, 5) | – | 2.9 | 1532 | 6 | 1344 | 2.2 |
 | title | hyperframes | --gpu (NVENC encode) | 4.33 (4.27–4.36, 5) | – | 2.6 | 1253 | 5 | 1150 | 2.2 |
 | title | hyperframes | --workers 24 (max) | 4.40 (4.34–4.48, 5) | – | 6.0 | 4901 | 7 | 2318 | 1.1 |
-| chart | ultrafast | default command | 0.88 (0.88–0.90, 5) | 2.63 | 0.8 | 124 | 10 | 1299 | 0.7 |
+| chart | ultrafast | default command | 0.72 (0.68–0.76, 5) | 2.09 | 1.0 | 125 | 16 | 1287 | 0.4 |
 | chart | remotion | prebuilt bundle, --gl=angle-egl, --concurrency 16 | 2.25 (2.24–2.31, 5) | – | 6.1 | 2492 | 0 | 0 | 0.2 |
 | chart | remotion | prebuilt bundle, --gl=vulkan, --concurrency 24 | 2.27 (2.24–2.32, 5) | – | 6.8 | 2811 | 5 | 1133 | 0.3 |
 | chart | remotion | prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 24 | 2.31 (2.30–2.47, 5) | – | 5.0 | 1698 | 7 | 1753 | 0.6 |
@@ -212,7 +222,7 @@ Fastest configuration found for each browser tool:
 | chart | hyperframes | --gpu --workers 4 | 3.74 (3.70–3.77, 5) | – | 2.2 | 937 | 4 | 980 | 0.4 |
 | chart | hyperframes | --gpu (NVENC encode) | 4.11 (4.08–4.17, 5) | – | 2.4 | 1233 | 4 | 1189 | 0.4 |
 | chart | hyperframes | --workers 24 (max) | 4.17 (4.15–4.19, 5) | – | 6.1 | 4972 | 6 | 2479 | 0.3 |
-| footage | ultrafast | default command | 0.98 (0.98–1.01, 5) | 2.62 | 0.8 | 129 | 8 | 1327 | 9.3 |
+| footage | ultrafast | default command | 0.78 (0.75–0.88, 5) | 1.99 | 1.0 | 132 | 12 | 1316 | 2.9 |
 | footage | remotion | prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 8 | 6.69 (6.58–6.83, 5) | – | 4.1 | 3962 | 5 | 1724 | 3.1 |
 | footage | remotion | prebuilt bundle, --gl=vulkan, --concurrency 8 | 6.75 (6.65–6.84, 5) | – | 5.2 | 5095 | 9 | 1061 | 2.4 |
 | footage | remotion | prebuilt bundle, --gl=angle-egl, --concurrency 8 | 6.75 (6.69–6.81, 5) | – | 5.2 | 5016 | 0 | 0 | 2.4 |
@@ -226,7 +236,7 @@ Fastest configuration found for each browser tool:
 | footage | hyperframes | default command | 5.05 (5.03–5.10, 5) | 5.55 | 4.5 | 2464 | 4 | 2053 | 4.7 |
 | footage | hyperframes | --workers 24 (max) | 5.19 (5.17–5.36, 5) | – | 6.9 | 5264 | 7 | 3615 | 4.7 |
 | footage | hyperframes | --gpu (NVENC encode) | 5.39 (5.38–5.43, 5) | – | 2.6 | 1468 | 5 | 2608 | 10.9 |
-| effects | ultrafast | default command | 0.97 (0.96–0.97, 5) | 2.54 | 0.7 | 121 | 16 | 1289 | 9.0 |
+| effects | ultrafast | default command | 0.74 (0.72–0.79, 5) | 2.01 | 0.9 | 116 | 30 | 1279 | 1.6 |
 | effects | remotion | prebuilt bundle, --gl=vulkan, NVENC (--hardware-acceleration, no CRF), --concurrency 12 | 2.98 (2.95–2.98, 5) | – | 3.1 | 1059 | 15 | 1347 | 2.7 |
 | effects | remotion | prebuilt bundle, --gl=vulkan, --concurrency 12 | 3.20 (3.18–3.21, 5) | – | 13.6 | 2180 | 12 | 728 | 16.0 |
 | effects | remotion | prebuilt bundle, --gl=angle-egl, --concurrency 12 | 4.13 (4.09–4.15, 5) | – | 20.2 | 3390 | 0 | 0 | 16.2 |
@@ -260,10 +270,10 @@ Fastest configuration found for each browser tool:
 
 | Composition | ultrafast `render --at 5` | Remotion `still --frame=150` | HyperFrames `snapshot --at 5` |
 |---|---:|---:|---:|
-| title | 0.34 | 2.19 | 1.52 |
-| chart | 0.35 | 2.16 | 1.52 |
-| footage | 0.82 | 2.29 | 2.10 |
-| effects | 0.59 | 2.35 | 1.96 |
+| title | 0.22 | 2.19 | 1.52 |
+| chart | 0.20 | 2.16 | 1.52 |
+| footage | 0.70 | 2.29 | 2.10 |
+| effects | 0.46 | 2.35 | 1.96 |
 
 ### Same picture? Luma SSIM / PSNR against ultrafast's video, all 300 frames
 
@@ -277,14 +287,14 @@ Fastest configuration found for each browser tool:
 | chart | hyperframes default | 0.991 | 34.0 |
 | chart | remotion fastest (bundled-angle-egl-c16) | 0.993 | 34.6 |
 | chart | hyperframes fastest (w4) | 0.991 | 34.0 |
-| footage | remotion default | 0.949 | 27.5 |
+| footage | remotion default | 0.948 | 27.5 |
 | footage | hyperframes default | 0.936 | 25.8 |
-| footage | remotion fastest (bundled-vulkan-nvenc-c8) | 0.949 | 27.6 |
+| footage | remotion fastest (bundled-vulkan-nvenc-c8) | 0.948 | 27.6 |
 | footage | hyperframes fastest (w8) | 0.936 | 25.8 |
-| effects | remotion default | 0.625 | 25.2 |
-| effects | hyperframes default | 0.626 | 25.5 |
-| effects | remotion fastest (bundled-vulkan-nvenc-c12) | 0.640 | 25.4 |
-| effects | hyperframes fastest (w12) | 0.626 | 25.5 |
+| effects | remotion default | 0.628 | 25.2 |
+| effects | hyperframes default | 0.628 | 25.5 |
+| effects | remotion fastest (bundled-vulkan-nvenc-c12) | 0.643 | 25.4 |
+| effects | hyperframes fastest (w12) | 0.628 | 25.5 |
 
 The frame grids are in [frames/](frames): `title.jpg`, `chart.jpg`, `footage.jpg` and
 `effects.jpg` put the same six moments from each tool's video side by side, and
@@ -307,7 +317,7 @@ blurs are computed differently (SPEC.md).
 | GPU | NVIDIA GeForce RTX 5090, 32 GB, driver 620.70.06 (also an AMD Radeon 610M integrated GPU, unused except as noted in caveat 6) |
 | OS | Fedora Linux 45, Linux 7.3.3-300.fc45.x86_64, KDE Plasma session logged in |
 | Node / npm | v22.23.1 / 10.9.8 |
-| ultrafast | 0.1.1 release binary (sha256 `409b020e9a6e85e4…`), Vulkan backend on the RTX 5090 |
+| ultrafast | 0.2.0 release binary (sha256 `ba045ae42109209c…`), Vulkan backend on the RTX 5090 |
 | Remotion | remotion, @remotion/cli, @remotion/media 4.0.545; React 19.3.1; its chrome-headless-shell 158.0.8127.2; its bundled FFmpeg (libx264) |
 | HyperFrames | hyperframes 0.9.79; GSAP 3.15.0; its chrome-headless-shell 158.0.8127.36; FFmpeg n9.0.2 static (BtbN, GPL, libx264) |
 | FFmpeg on PATH | ffmpeg version 9.0.2 (Fedora ffmpeg-free; ultrafast uses it only to mux) |
@@ -354,20 +364,27 @@ The exact command line of every run is in `results.json` (`runs[].argv`).
    by default, and encodes with libx264 on the CPU. HyperFrames renders in headless Chrome
    with the GPU on (it detected the RTX 5090 by itself) and encodes with libx264 by default.
    On a machine without a capable GPU the comparison is different: ultrafast needs a
-   Vulkan or Metal GPU, and the browser tools do not.
-2. **Encoders differ, so "CRF 18" is not the same quality in all three.** ultrafast's
-   `--crf 18` sets NVENC's constant-quality mode, and the browser tools pass CRF 18 to
-   libx264 (preset medium). NVENC files at the same number are larger here: 2.7 MB
-   against 0.6 MB (Remotion) and 1.1 MB (HyperFrames) for the title card, 2.0 to 4.4
-   times the size across the first three scenes. On `effects` they are about half the
-   size, because the browser tools' grain is costlier to compress. The tables give
-   every file size. Swapping in NVENC shows how little of the gap the encoder accounts
-   for. HyperFrames with `--gpu` was 0.1 to 0.4 s slower than with libx264 at the same
-   worker count. Remotion with NVENC ranged from 0.22 s faster to 0.04 s slower than with
-   libx264, and it ran at NVENC's default quality, since Remotion does not allow `--crf`
-   with it: its `effects` file is 2.7 MB against 16 MB.
-3. **Most of ultrafast's time is start-up.** Of about 0.9 s per render, ultrafast's own log
-   gives 0.30 to 0.42 s for rendering and encoding the 300 frames. The rest is process
+   Vulkan or Metal GPU for this speed (without one, its Docker image renders on the CPU
+   through Mesa's lavapipe, far more slowly), and the browser tools do not.
+2. **Encoders differ, so "CRF 18" is not exactly the same quality in all three.** The
+   browser tools pass CRF 18 to libx264 (preset medium). ultrafast encodes with NVENC,
+   whose constant-quality scale gives a finer picture than libx264's CRF at the same
+   number, so since 0.2.0 it reads `--crf` on libx264's scale: CRF 18 becomes NVENC
+   constant quality 24 (preset P4, three B-frames). That setting matched libx264's CRF 18
+   picture within 0.3 VMAF points when both encoded ultrafast's own lossless render of
+   each of these four scenes. Its files are 1.1 MB against 0.6 MB (Remotion) and 1.1 MB
+   (HyperFrames) for the title card, and 1.15 to 1.75 times the size of Remotion's
+   across the first three scenes (0.62 to 1.23 times HyperFrames'). On `effects` they
+   are about a tenth of the size, because the browser tools' grain is costlier to
+   compress. (0.1.1 passed CRF 18 to NVENC unchanged, and its files were 2.0 to 4.4 times
+   the size of the browser tools'.) The tables give every file size. Swapping in NVENC
+   shows how little of the gap the encoder accounts for. HyperFrames with `--gpu` was 0.1
+   to 0.4 s slower than with libx264 at the same worker count. Remotion with NVENC ranged
+   from 0.22 s faster to 0.04 s slower than with libx264, and it ran at NVENC's default
+   quality, since Remotion does not allow `--crf` with it: its `effects` file is 2.7 MB
+   against 16 MB.
+3. **Most of ultrafast's time is start-up.** Of 0.66 to 0.78 s per render, ultrafast's own
+   log gives 0.22 to 0.36 s for rendering and encoding the 300 frames. The rest is process
    and GPU start-up and muxing. For short videos the end-to-end ratio is therefore smaller
    than the rendering-speed ratio, and the end-to-end one is the honest number to quote.
    Longer videos should widen the gap, because every tool's fixed costs then matter less,
@@ -396,19 +413,24 @@ The exact command line of every run is in `results.json` (`runs[].argv`).
    includes the extraction.
 8. **"Cold" is not a cold boot.** Cold runs clear each tool's own caches but not the
    operating system's file cache, and the browsers stay installed. ultrafast's cold run
-   compiles its GPU pipelines (53 to 55 of them, which adds about 1.6 to 1.8 s),
+   compiles its GPU pipelines (25 to 27 of them, which adds about 1.1 to 1.4 s),
    Remotion's runs webpack without its cache, and HyperFrames' extracts the video frames
    again.
-9. **Colour tags.** ultrafast 0.1.1 writes BT.709 video without colour tags in the file.
-   Remotion writes BT.601 without tags. HyperFrames tags its files as BT.709. Players that
-   guess BT.601 for untagged HD video (FFmpeg-based tools) show ultrafast's colours
-   slightly off, and players that guess BT.709 (most browsers) show Remotion's slightly
-   off. This does not affect speed; the comparison grids decode each file with the matrix
-   it was actually written with.
-10. **One machine, one night.** Every number here comes from one AMD Ryzen 9 9950X3D2 and
-    RTX 5090 workstation. Another session was running a similar benchmark on the machine
-    earlier that night: every run made before it stopped was thrown away, and the whole
-    benchmark was run again from scratch afterwards (see "A quiet machine").
+9. **Colour tags.** ultrafast 0.2.0 and HyperFrames tag their files as BT.709 (ultrafast
+   0.1.1 wrote BT.709 without tags). Remotion writes BT.601 without tags, so players that
+   guess BT.709 for untagged HD video (most browsers) show its colours slightly off. This
+   does not affect speed; the comparison grids decode each file with the matrix it was
+   actually written with.
+10. **One machine, two nights.** Every number here comes from one AMD Ryzen 9 9950X3D2 and
+    RTX 5090 workstation, with the same driver and kernel both nights. The whole
+    benchmark ran on 22 November 2026. Another session was running a similar benchmark on
+    the machine earlier that night: every run made before it stopped was thrown away, and
+    the whole benchmark was run again from scratch afterwards (see "A quiet machine").
+    ultrafast's rows were measured again with the 0.2.0 release on the night of 23
+    November, and Remotion and HyperFrames were not re-run. As a control, the 0.1.1
+    release was measured again straight after 0.2.0, the same way: its warm medians were
+    0.89–1.01 s, 3 to 5 % slower than on 22 November, so the second night did not favour
+    ultrafast. Those runs are in `results/runs-0.1.1-same-night.jsonl`.
 11. **Idiomatic, not hand-tuned.** Each scene is written the way the tool's docs teach,
     with no tool-specific speed tricks beyond the documented options measured above.
     Someone who knows a tool well could probably make its version faster, and the source
@@ -419,7 +441,7 @@ The exact command line of every run is in `results.json` (`runs[].argv`).
 
 You need Linux with cgroup v2 and systemd (for `systemd-run --user --scope`), an NVIDIA
 GPU with `nvidia-smi`, Node 22 or newer, Python 3, FFmpeg and ffprobe on PATH (ultrafast
-muxes with it), and the ultrafast 0.1.1 release
+muxes with it), and the ultrafast 0.2.0 release
 (<https://github.com/ultrafastmov/ultrafast/releases>).
 
 ```sh
@@ -434,6 +456,10 @@ HyperFrames (see the caveats), all inside this folder. `run.sh` writes `results/
 `frames/`. With the waits for a quiet machine, a full run takes one to two hours. Nothing
 in it is random: the scenes are pure functions of time, and the runs go in a fixed order.
 
+To measure only ultrafast's rows again, as was done for 0.2.0, run
+`UF=/path/to/ultrafast python3 -I harness/ultrafast_only.py`; its docstring gives the steps
+around it.
+
 ## Files
 
 | Path | What |
@@ -442,9 +468,9 @@ in it is random: the scenes are pure functions of time, and the runs go in a fix
 | [ultrafast/build.py](ultrafast/build.py) | writes the ultrafast documents (`*.json`) |
 | [remotion/src](remotion/src) | the Remotion project |
 | [hyperframes/](hyperframes) | one HyperFrames project per scene |
-| [harness/](harness) | `bench.py` (runs and measures), `runner.py` (inside the cgroup), `verify.py` (grids and similarity), `summarize.py`, `env_info.py`, `env.sh` |
+| [harness/](harness) | `bench.py` (runs and measures), `runner.py` (inside the cgroup), `verify.py` (grids and similarity), `summarize.py`, `env_info.py`, `env.sh`, `ultrafast_only.py` (ultrafast's rows alone) |
 | [results.json](results.json) | every run and every summary number |
-| [results/](results) | `runs.jsonl`, `tables.md`, `environment.json`, `similarity.json` |
+| [results/](results) | `runs.jsonl`, `tables.md`, `environment.json`, `similarity.json`, `runs-0.1.1-same-night.jsonl` |
 | [frames/](frames) | the side-by-side grids and per-tool contact sheets |
 | [assets/](assets) | fonts (SIL OFL) and the NASA clip ([provenance](assets/footage/PROVENANCE.md)) |
 

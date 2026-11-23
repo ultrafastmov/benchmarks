@@ -45,7 +45,8 @@ def load(path):
 
 
 def good(r):
-    return r.get("ok") and not r.get("contaminated")
+    # "invalid": a run set aside after the fact, with the reason (see README, "A quiet machine")
+    return r.get("ok") and not r.get("contaminated") and not r.get("invalid")
 
 
 def stats(vals):
@@ -159,6 +160,7 @@ def main():
     quiet = {
         "runs_counted": len(counted),
         "runs_discarded_for_other_load": sum(1 for r in runs if r.get("contaminated")),
+        "runs_set_aside_invalid": sum(1 for r in runs if r.get("invalid") and not r.get("contaminated")),
         "runs_failed": sum(1 for r in runs if not r.get("ok")),
         "busy_threads_before_median": pct(before, 0.5), "busy_threads_before_max": pct(before, 1.0),
         "loadavg1_before_median": pct(la, 0.5), "loadavg1_before_max": pct(la, 1.0),
@@ -171,7 +173,8 @@ def main():
     }
 
     result = {
-        "about": "Render-speed benchmark: ultrafast 0.1.1 vs Remotion vs HyperFrames on one machine. "
+        "about": f"Render-speed benchmark: {(env.get('ultrafast') or {}).get('version') or 'ultrafast'} vs Remotion vs "
+                 "HyperFrames on one machine. "
                  "Times are wall-clock seconds for the whole CLI command (start to finished MP4); "
                  "see README.md for the method.",
         "environment": env,
@@ -218,8 +221,11 @@ def write_tables(res):
     q = res.get("machine_quiet", {})
     if q:
         L.append("\n### Was the machine quiet?\n")
+        aside = q.get("runs_set_aside_invalid")
         L.append(f"- runs counted: {q['runs_counted']}; discarded because other work overlapped them: "
-                 f"{q['runs_discarded_for_other_load']}; failed: {q['runs_failed']}")
+                 f"{q['runs_discarded_for_other_load']}; "
+                 + (f"set aside as invalid (`invalid` in runs.jsonl gives why): {aside}; " if aside else "")
+                 + f"failed: {q['runs_failed']}")
         L.append(f"- CPU busy just before a run (whole machine, threads of 32): median "
                  f"{q['busy_threads_before_median']}, max {q['busy_threads_before_max']}")
         L.append(f"- 1-minute load average at the start of a run: median {q['loadavg1_before_median']}, "
